@@ -1,0 +1,6 @@
+[submodule "hugo-whisper-theme"]
+	path = hugo-whisper-theme
+	url = https://github.com/jugglerx/hugo-whisper-theme
+[submodule "hugo-geekdoc"]
+	path = hugo-geekdoc
+	url = https://github.com/thegeeklab/hugo-geekdoc

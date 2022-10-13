@@ -1,4 +1,5 @@
-baseURL = 'http://localhost'
+baseURL = '/'
+themesDir = "themes"
 languageCode = 'en-us'
-title = 'Geekdocs'
-theme = 'netlify-basic'
+title = 'Tue Hellstern :: Kea'
+theme = 'hugo-geekdoc'
