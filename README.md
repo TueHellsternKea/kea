@@ -1,6 +1,6 @@
  [![hugo + netlify](https://res.cloudinary.com/dzkoxrsdj/image/upload/v1656562989/template_1_edyp8b.png)](https://ntl.fyi/3P9w1mr)
 
-# Hugo Quickstart Template   
+# Hugo Quickstart Template   test
 
 This is a bare-bones Hugo project that has everything you need to quickly deploy it to [Netlify](https://netlify.com). 
 
