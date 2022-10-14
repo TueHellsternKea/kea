@@ -1,5 +1,0 @@
-baseURL = '/'
-themesDir = "themes"
-languageCode = 'en-us'
-title = 'Tue Hellstern :: Kea'
-theme = 'hugo-geekdoc'
