@@ -1,4 +1,6 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'Tue Hellstern :: Kea'
-theme = "hugo-book"
+theme = 'hugo-book'
+BookToC = true
+BookComments = false
