@@ -2,5 +2,12 @@ baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'Tue Hellstern :: Kea'
 theme = 'hugo-book'
+
+# Book configuration
+disablePathToLower = true
+enableGitInfo = true
+
+[params]
 BookToC = true
+BookSection = '*'
 BookComments = false
