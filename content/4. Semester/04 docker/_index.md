@@ -53,13 +53,6 @@ The Docker daemon (*dockerd*) listens for Docker API requests and manages Docker
 ## The Docker client
 The Docker client (*docker*) is the primary way that many Docker users interact with Docker. When you use commands such as docker run, the client sends these commands to dockerd, which carries them out. The docker command uses the Docker API. The Docker client can communicate with more than one daemon.
 
-## Docker Desktop
-**Docker Desktop** is an easy-to-install application for your **Mac** or **Windows** environment that enables you to build and share containerized applications and microservices. 
-
-Docker Desktop includes the Docker daemon (*dockerd*), the Docker client (*docker*), Docker Compose, Docker Content Trust, Kubernetes, and Credential Helper. 
-
-[Docker Desktop](./DockerDesktop.md)
-
 ## Docker registries
 A Docker registry stores Docker images. Docker Hub is a public registry that anyone can use, and Docker is configured to look for images on Docker Hub by default. You can even run your own private registry.
 
@@ -89,6 +82,10 @@ By default, a container is relatively well isolated from other containers and it
 A container is defined by its image as well as any configuration options you provide to it when you create or start it. When a container is removed, any changes to its state that are not stored in persistent storage disappear.
 
 # Docker Desktop
+**Docker Desktop** is an easy-to-install application for your **Mac** or **Windows** environment that enables you to build and share containerized applications and microservice. 
+
+Docker Desktop includes the Docker daemon (*dockerd*), the Docker client (*docker*), Docker Compose, Docker Content Trust, Kubernetes, and Credential Helper. 
+
 The Docker Desktop application makes it easy for you to work with Docker. There are versions of Docker Desktop for; *macOS*, *Windows* and *Linux*
 
 ## Download and Install
@@ -98,7 +95,7 @@ You can download the version you need her: [www.docker.com/products/docker-deskt
 - [Install Docker Desktop on **Mac**](https://docs.docker.com/desktop/mac/install/)
 
 ## Docker demo
-The GitHub Repository - [https://github.com/TueHellsternKea/docker-demo.git](https://github.com/TueHellsternKea/docker-demo.git) - containes different guides on Docker
+The GitHub Repository - [https://github.com/TueHellsternKea/docker-demo.git](https://github.com/TueHellsternKea/docker-demo.git) - contains different guides on Docker.
 
 # Links
 - [www.docker.com](https://www.docker.com/)

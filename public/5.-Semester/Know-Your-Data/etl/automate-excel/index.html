@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Automate data processing#In Excel using Python, Pandas, and Openpyxl#Files#Excel
+sales_data.xlsx sales_data.xlsx Jupyter Lab
+Real_world_example.ipynb demo.ipynb openpyxl-chart-notebook.ipynb openpyxl-tutorial.ipynb Introduction#This is all about automating Microsoft Excel using python and two different libraries.
+The first library is Pandas. This library is used to process dataframes at high speed. Pandas is used all over the world of data analysis, data science, and data engineering. A basic workflow is Pandas is to load and excel file into a dataframe, apply all sorts of complex processing wit few lines of code, then save the results into Excel.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
+<meta property="og:description" content="Automate data processing#In Excel using Python, Pandas, and Openpyxl#Files#Excel
+sales_data.xlsx sales_data.xlsx Jupyter Lab
+Real_world_example.ipynb demo.ipynb openpyxl-chart-notebook.ipynb openpyxl-tutorial.ipynb Introduction#This is all about automating Microsoft Excel using python and two different libraries.
+The first library is Pandas. This library is used to process dataframes at high speed. Pandas is used all over the world of data analysis, data science, and data engineering. A basic workflow is Pandas is to load and excel file into a dataframe, apply all sorts of complex processing wit few lines of code, then save the results into Excel." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/5.-Semester/Know-Your-Data/etl/automate-excel/" /><meta property="article:section" content="5. Semester" />
+
+<meta property="article:modified_time" content="2022-10-16T12:12:12+02:00" />
+
+<title>Automate Excel | Tue Hellstern :: Kea</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.8ad930aacb0091456fa5839232a69c3138f03ea2509331560429d17a72cec3a2.js" integrity="sha256-itkwqssAkUVvpYOSMqacMTjwPqJQkzFWBCnRenLOw6I=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Tue Hellstern :: Kea</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6b5543328cac445d69ea9e222cb6025a" class="toggle"  />
+    <label for="section-6b5543328cac445d69ea9e222cb6025a" class="flex justify-between">
+      <a href="/4.-Semester/" class="">4. Semester</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3e6198acbc93b3ce9e70719f4e0b73be" class="toggle"  />
+    <label for="section-3e6198acbc93b3ce9e70719f4e0b73be" class="flex justify-between">
+      <a href="/4.-Semester/04-docker/" class="">04 Docker</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-Semester/04-docker/DockerDesktop/" class="">Docker Desktop</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-156bef0ddf951024222acfda5464e042" class="toggle" checked />
+    <label for="section-156bef0ddf951024222acfda5464e042" class="flex justify-between">
+      <a href="/5.-Semester/" class="">5. Semester</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1a9a2bf9c3796e10bc3195e7fc6122c3" class="toggle" checked />
+    <label for="section-1a9a2bf9c3796e10bc3195e7fc6122c3" class="flex justify-between">
+      <a href="/5.-Semester/Know-Your-Data/" class="">Know Your Data</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dfc259a3c3e7f8cdef022dcf8ee6d77f" class="toggle" checked />
+    <label for="section-dfc259a3c3e7f8cdef022dcf8ee6d77f" class="flex justify-between">
+      <a href="/5.-Semester/Know-Your-Data/etl/" class="">Etl</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-Semester/Know-Your-Data/etl/automate-excel/" class="active">Automate Excel</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-Semester/Know-Your-Data/etl/excel-powerbi-etl/" class="">Excel Powerbi Etl</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-Semester/Know-Your-Data/etl/slides/ETL-slide/" class="">ETL</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ca61b7f16d93017dca45a3b63f69c5ad" class="toggle"  />
+    <label for="section-ca61b7f16d93017dca45a3b63f69c5ad" class="flex justify-between">
+      <a role="button" class="">Om</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Om/tuehellstern/" class="">Tue hellstern</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Automate Excel</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#in-excel-using-python-pandas-and-openpyxl">In Excel using Python, Pandas, and Openpyxl</a></li>
+    <li><a href="#files">Files</a></li>
+    <li><a href="#introduction">Introduction</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#introduction-1">Introduction</a></li>
+    <li><a href="#why-automating-excel">Why Automating Excel</a></li>
+    <li><a href="#why-using-python">Why using Python</a></li>
+    <li><a href="#why-using-pandas">Why using Pandas</a></li>
+    <li><a href="#installing-python">Installing Python</a></li>
+    <li><a href="#installing-pandas">Installing Pandas</a></li>
+    <li><a href="#best-way-to-apply-the-automation">Best way to apply the automation</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#working-with-columns-in-pandas">Working with columns in pandas</a></li>
+    <li><a href="#working-with-rows-in-pandas">Working with rows in pandas</a></li>
+    <li><a href="#data-aggregation--aggregate-functions">Data aggregation – Aggregate Functions</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#introduction-on-openpyxl">Introduction on openpyxl</a></li>
+    <li><a href="#getting-started-1">Getting started</a></li>
+    <li><a href="#working-with-workbooks">Working with workbooks</a>
+      <ul>
+        <li><a href="#load-existing-workbook">Load existing workbook</a></li>
+        <li><a href="#create-new-workbook">Create new workbook</a></li>
+        <li><a href="#save-a-workbook">Save a workbook</a></li>
+        <li><a href="#working-with-worksheets">Working with worksheets</a></li>
+      </ul>
+    </li>
+    <li><a href="#working-with-cells-rows-columns-and-ranges">Working with Cells, Rows, Columns, and Ranges</a>
+      <ul>
+        <li><a href="#merging-and-unmerging-a-range-of-cells">Merging and unmerging a range of cells</a></li>
+        <li><a href="#inserting-empty-rows">Inserting empty rows</a></li>
+        <li><a href="#deleting-an-entire-row">Deleting an entire row</a></li>
+        <li><a href="#inserting-an-empty-column">Inserting an empty column</a></li>
+        <li><a href="#deleting-an-entire-column">Deleting an entire column</a></li>
+      </ul>
+    </li>
+    <li><a href="#use-excel-supported-formulas">Use Excel supported formulas</a></li>
+    <li><a href="#working-with-charts">Working with Charts</a>
+      <ul>
+        <li><a href="#available-charts">Available charts</a></li>
+        <li><a href="#for-our-tutorial-we-will-see-how-to-make-a-beginner-friendly-line-chart">For our tutorial we will see how to make a beginner friendly Line Chart</a></li>
+      </ul>
+    </li>
+    <li><a href="#using-lookups-in-openpyxl">Using Lookups in openpyxl</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#conclusion-1">Conclusion</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="automate-data-processing">
+  Automate data processing
+  <a class="anchor" href="#automate-data-processing">#</a>
+</h1>
+<h2 id="in-excel-using-python-pandas-and-openpyxl">
+  In Excel using Python, Pandas, and Openpyxl
+  <a class="anchor" href="#in-excel-using-python-pandas-and-openpyxl">#</a>
+</h2>
+<h2 id="files">
+  Files
+  <a class="anchor" href="#files">#</a>
+</h2>
+<p><strong>Excel</strong></p>
+<ul>
+<li><a href="./jupyterlab/sales_data.xlsx">sales_data.xlsx</a></li>
+<li><a href="./jupyterlab/sales_data.xlsx">sales_data.xlsx</a></li>
+</ul>
+<p><strong>Jupyter Lab</strong></p>
+<ul>
+<li><a href="../etl/jupyterlab/Real_world_example.ipynb">Real_world_example.ipynb</a></li>
+<li><a href="../etl/jupyterlab/demo.ipynb">demo.ipynb</a></li>
+<li><a href="../etl/jupyterlab/openpyxl-chart-notebook.ipynb">openpyxl-chart-notebook.ipynb</a></li>
+<li><a href="../etl/jupyterlab/openpyxl-tutorial.ipynb">openpyxl-tutorial.ipynb</a></li>
+</ul>
+<h2 id="introduction">
+  Introduction
+  <a class="anchor" href="#introduction">#</a>
+</h2>
+<p>This is all about automating Microsoft Excel using python and two different libraries.</p>
+<p>The first library is <strong>Pandas</strong>. This library is used to process dataframes at high speed. <strong>Pandas</strong> is used all over the world of data analysis, data science, and data engineering. A basic workflow is <strong>Pandas</strong> is to load and excel file into a dataframe, apply all sorts of complex processing wit few lines of code, then save the results into Excel.</p>
+<p>The second library we will be using is <strong>Openpyxl</strong>. This library provides a more familiar automation of excel. Meaning it all us to replicate the exact steps we would use manually in excel using few lines of python code, and with that, automating those steps. <strong>Openpyxl</strong> provides all sorts of supported excel options, from charts, to formulas, to styling…etc.</p>
+<h1 id="working-with-pandas">
+  WORKING WITH PANDAS
+  <a class="anchor" href="#working-with-pandas">#</a>
+</h1>
+<h2 id="introduction-1">
+  Introduction
+  <a class="anchor" href="#introduction-1">#</a>
+</h2>
+<p>We live in the age of automation where more and more tasks are getting automated by algorithms, so that we can focus more on our core work and not waste valuable time on second degree tasks.</p>
+<p>In this beginner’s friendly post, we will explore how to automate certain Excel tasks related to data processing using the Python programming language and the famous Pandas library.</p>
+<p>This article is a tutorial-based walkthrough where we explain concepts and share code snippets of each step of the process to facilitate for beginners to grasp concepts better.</p>
+<h2 id="why-automating-excel">
+  Why Automating Excel
+  <a class="anchor" href="#why-automating-excel">#</a>
+</h2>
+<p>Like we mentioned in the introduction, automation is everywhere and Excel is one of the places where it’s visible in corporations and enterprises. A good example would be that a Data Analyst would do more analyzing work if he/she can automate some tasks and not waste working hours on them.</p>
+<p>Another good reason is that Excel is very popular and used everywhere, meaning that learning how to automate its workflows is a great investment for you and for the company you are working for.</p>
+<h2 id="why-using-python">
+  Why using Python
+  <a class="anchor" href="#why-using-python">#</a>
+</h2>
+<p>At this point of time in the world of programming, the real question is, why not use Python?</p>
+<p>Python is extremely popular nowadays and it’s used in almost every computer science branch.</p>
+<p>The popularity of Python is due to many factors like the ease of use, the numerous open-source packages it has, and the ever-growing community that is supporting it.</p>
+<p>One of the domains where Python really shines is Automation, and in this article, we will demonstrate how we can use it to automate Excel data processing.</p>
+<h2 id="why-using-pandas">
+  Why using Pandas
+  <a class="anchor" href="#why-using-pandas">#</a>
+</h2>
+<p>Pandas is one of the most used python libraries, especially in the world of data science, data analysis, data engineering, and machine learning. It uses the concepts of dataframes where it reads and then loads data in memory in the format of tabular data. Meaning rows and columns, similar to a database table.</p>
+<p>Dataframes allow us to handle data easily as well as apply complex processing to the data with few lines of code.</p>
+<p>You can think of a Pandas’ dataframe like an Excel spreadsheet on steroids. They may look the same, but a dataframe is more powerful.</p>
+<h2 id="installing-python">
+  Installing Python
+  <a class="anchor" href="#installing-python">#</a>
+</h2>
+<p>If you have a new computer or <em>something is gone wrong</em> with Python.</p>
+<p>To install python, head out to the official website <a href="https://www.python.org/downloads">www.python.org/downloads</a> and download the specific version for your computer, then install it like any other software.</p>
+<h2 id="installing-pandas">
+  Installing Pandas
+  <a class="anchor" href="#installing-pandas">#</a>
+</h2>
+<p>Once python is installed in your machine, we use the pip command to install Python packages.</p>
+<p>To install Pandas, open the terminal or the command prompt, and type the following:</p>
+<pre><code>pip install pandas
+</code></pre>
+<p>then hit enter.</p>
+<h2 id="best-way-to-apply-the-automation">
+  Best way to apply the automation
+  <a class="anchor" href="#best-way-to-apply-the-automation">#</a>
+</h2>
+<p>The best way to apply Excel automation is if we have some kind of a report that we always make using some fixed-structure data. If the structure of data does not change, which is the case for reports, we simply automate the steps we usually do in Excel (loading the data, calculation, aggregations, deleting certain rows, … finally, saving the file).</p>
+<h2 id="getting-started">
+  Getting Started
+  <a class="anchor" href="#getting-started">#</a>
+</h2>
+<p>Now that we have Python and Pandas installed on our local machine, we can start the work.</p>
+<p>For this example, we will use the Jupyter Notebook as our text editor. Of course, you can choose any other text editor like VSCode.</p>
+<p>The first thing when using the Pandas library with python, is to import it using the following code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span></code></pre></div><p>Reading Excel and CSV files using pandas</p>
+<p>The data that we will be working with is this:</p>
+<p><img src="./image/sales_data.jpg" alt="" /></p>
+<p>The first step is always to read the file where the data is located, so that we can extract it, process it, and then save it in an Excel friendly format.</p>
+<p>In this example we read data from either an Excel (xlsx) or CSV file. Since those are the two most used formats in Excel.</p>
+<p>To read data from CSV we use the <strong>read_csv</strong> method and give it the path of our csv file as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(path)
+</span></span></code></pre></div><p>To read data from Excel we use the <strong>read_excel</strong> method and give it the path of our csv file as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_excel(path)
+</span></span></code></pre></div><p>To visualize our dataframe we can print it out using <strong>print(df)</strong>. That way we can have an idea about our data, and to confirm that we had no errors when we imported the data.</p>
+<p>Or use <strong>print(df.head())</strong> to print the first 5 records (<em>rows</em>) of the dataframe.</p>
+<h2 id="working-with-columns-in-pandas">
+  Working with columns in pandas
+  <a class="anchor" href="#working-with-columns-in-pandas">#</a>
+</h2>
+<p>Pandas gives us the possibility to apply all sorts of operations on columns same as Excel does. From slicing, to copying, to applying mathematical calculations, to creating new columns, we can automate it all using Python and Pandas.</p>
+<p>Here are some examples to help you get started:</p>
+<p>To get the name of the columns from a pandas dataframe:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>list(df<span style="color:#f92672">.</span>columns)
+</span></span></code></pre></div><p>To get how many rows and columns we have:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df<span style="color:#f92672">.</span>shape
+</span></span></code></pre></div><p>We can see that we have 11 rows and 5 columns</p>
+<p>To get the values of a single column from the data we use the following code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>column <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;column name&#39;</span>]
+</span></span></code></pre></div><p>That’s possible since we can get separate columns as follows:</p>
+<p><img src="./image/column_name.jpg" alt="" /></p>
+<p>To create a dataframe out of the previous one or just assign a column to another one in pandas we use the following syntax</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;column 2&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;column 1&#39;</span>]
+</span></span></code></pre></div><p>Basically, in the above example we created a new column named &ldquo;column 2&rdquo; which is a copy of the previously existing &ldquo;column 1&rdquo;.</p>
+<p>Creating a dataframe from two previous columns:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df2 <span style="color:#f92672">=</span> df[[<span style="color:#e6db74">&#39;Client Name&#39;</span> ,<span style="color:#e6db74">&#39;Item&#39;</span>]]
+</span></span></code></pre></div><p><img src="./image/column_select.jpg" alt="" /></p>
+<p>To delete a column, we use the following syntax:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df<span style="color:#f92672">.</span>drop(<span style="color:#e6db74">&#39;column_name&#39;</span>, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><p><img src="./image/drop.jpg" alt="" /></p>
+<p><strong>Note</strong> that <strong>axis=1</strong> refers to the <strong>columns</strong>, and <strong>axis=0</strong> refers to the <strong>rows</strong>. We set <strong>inplace=True</strong> so that we don’t need to assign the dataframe, meaning the changes will saved directly.</p>
+<h2 id="working-with-rows-in-pandas">
+  Working with rows in pandas
+  <a class="anchor" href="#working-with-rows-in-pandas">#</a>
+</h2>
+<p>Same as with columns, we have a lot of functions in Pandas that allow us to apply all sorts of handling and calculations directly to the rows of our dataframe.</p>
+<p>To retrieve a row in Pandas we use the loc method:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>First_row <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>loc[<span style="color:#e6db74">&#39;row_cell_value&#39;</span>]
+</span></span></code></pre></div><p><img src="./image/df_loc_0.jpg" alt="" /></p>
+<p>Notice how the row gets printed in Jupyter. That’s one of the advantages of using it.</p>
+<p>Same as with columns, to delete a row in pandas we use the <strong>drop</strong> method. The only difference is that we set <strong>axis=0</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df<span style="color:#f92672">.</span>drop(<span style="color:#ae81ff">7</span>, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><p><img src="./image/drop.jpg" alt="" /></p>
+<p>In the above example we deleted row 7 and you can notice that if you check rows’ indexes on the far left, we have all values from 0 to 10, except for 7.</p>
+<p>We can also delete multiple rows at by passing the indexes of the rows we wish to delete as a list:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df<span style="color:#f92672">.</span>drop([<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">6</span>], axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, inplace<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><p><img src="./image/drop_flere.jpg" alt="" /></p>
+<p>In the above example we deleted rows <strong>2, 3, and 6</strong>. You can verify that that’s true by checking the index column. We have all indexes from 0 to 10 except for 2, 3, and 6.</p>
+<p>We can concatenate two dataframes together using Pandas. The equivalent of that would be concatenating two tables or even two spreadsheets in Excel.</p>
+<p>To concatenate let’s say df1 and df2 into df3, we use the following code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df3 <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>concat([df1, df2])<span style="color:#f92672">.</span>reset_index(drop <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><h2 id="data-aggregation--aggregate-functions">
+  Data aggregation – Aggregate Functions
+  <a class="anchor" href="#data-aggregation--aggregate-functions">#</a>
+</h2>
+<p>What is an aggregate function? Same as in Excel or SQL, aggregate functions perform a mathematical calculation on a set of values (grouped data) and return a one single value. Basically, when aggregating rows, we get a summary of that row.</p>
+<p>Here are some aggregate functions that are supported by Pandas:</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>count()</td>
+<td>Returns count for each group</td>
+</tr>
+<tr>
+<td>size()</td>
+<td>Returns size for each group</td>
+</tr>
+<tr>
+<td>sum()</td>
+<td>Returns total sum for each group</td>
+</tr>
+<tr>
+<td>mean()</td>
+<td>Returns mean for each group. Same as average()</td>
+</tr>
+<tr>
+<td>average()</td>
+<td>Returns average for each group. Same as mean()</td>
+</tr>
+<tr>
+<td>std()</td>
+<td>Returns standard deviation for each group</td>
+</tr>
+<tr>
+<td>var()</td>
+<td>Return var for each group</td>
+</tr>
+<tr>
+<td>sem()</td>
+<td>Standard error of the mean of groups</td>
+</tr>
+<tr>
+<td>describe()</td>
+<td>Returns different statistics</td>
+</tr>
+</tbody>
+</table>
+<p>To use an aggregate function in Pandas, we always call the aggregate method, then pass one of the supported functions as a value.</p>
+<p>For example, to calculate the sum of the &ldquo;<strong>Full Price</strong>&rdquo;, and &ldquo;<strong>Discount</strong>&rdquo; values, we use the following code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>results <span style="color:#f92672">=</span> df[[<span style="color:#e6db74">&#39;Full Price&#39;</span>, <span style="color:#e6db74">&#39;Discount&#39;</span>]]<span style="color:#f92672">.</span>aggregate(<span style="color:#e6db74">&#39;sum&#39;</span>)
+</span></span></code></pre></div><p><img src="./image/sum1.jpg" alt="" /></p>
+<p>Let’s check a more complex example. To calculate the sum of the &ldquo;<strong>Full Price</strong>&rdquo; column, as well as the min and max of the <strong>Discount</strong>&quot; column, we use the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>results <span style="color:#f92672">=</span> df<span style="color:#f92672">.</span>aggregate({<span style="color:#e6db74">&#39;Full Price&#39;</span>:<span style="color:#e6db74">&#39;sum&#39;</span>,<span style="color:#e6db74">&#39;Discount&#39;</span>:[<span style="color:#e6db74">&#39;min&#39;</span>, <span style="color:#e6db74">&#39;max&#39;</span>]})
+</span></span></code></pre></div><p><img src="./image/sum2.jpg" alt="" /></p>
+<p>As we can see from the results, The sum of the &ldquo;<strong>Full Price</strong> is <strong>6.950</strong>, the <strong>min</strong> and <strong>max</strong> of the <strong>Discount</strong>&rdquo; are <strong>0, 150</strong> accordingly.</p>
+<h1 id="real-world-example">
+  Real world example
+  <a class="anchor" href="#real-world-example">#</a>
+</h1>
+<p>In this section we will work on a real-world project to visualize the benefits of automating Excel workflows.</p>
+<p>We will use the previously imported data where we have 5 columns which are <em>Client Name</em>, <em>Item</em>, <em>Location</em>, <em>Full Price</em>, and <em>Discount</em>.</p>
+<p>Let’s say our workflow contains the following steps:</p>
+<ol>
+<li>Calculate the Percentages of discounts in a new Column</li>
+<li>Calculate the Final Price after applying the discount in a new column</li>
+<li>Delete all rows where Discount is equal to 0</li>
+<li>Save the results in a new file under the name <strong>final-results.xlsx</strong></li>
+</ol>
+<p><strong>We first Import pandas:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span></code></pre></div><p><strong>Then we read the file:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_excel(<span style="color:#e6db74">&#39;sales_data.xlsx&#39;</span>)
+</span></span></code></pre></div><p><strong>We usually print the dataframe to check that everything is okay:</strong></p>
+<p><img src="./image/rw_df.jpg" alt="" /></p>
+<p><strong>Calculating the percentages:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;Discount Percentage&#39;</span>] <span style="color:#f92672">=</span> (df[<span style="color:#e6db74">&#39;Discount&#39;</span>] <span style="color:#f92672">/</span> df[<span style="color:#e6db74">&#39;Full Price&#39;</span>]) <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;Discount Percentage&#39;</span>]<span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;Discount Percentage&#39;</span>]<span style="color:#f92672">.</span>map(<span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{:,.2f}</span><span style="color:#e6db74">&#39;</span><span style="color:#f92672">.</span>format)
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">```</span>python
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">!</span>[](<span style="color:#f92672">./</span>image<span style="color:#f92672">/</span>discount_1<span style="color:#f92672">.</span>jpg)
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">**</span>Calculating the final price:<span style="color:#f92672">**</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">```</span>python
+</span></span><span style="display:flex;"><span>df[<span style="color:#e6db74">&#39;Final Price&#39;</span>] <span style="color:#f92672">=</span> df[<span style="color:#e6db74">&#39;Full Price&#39;</span>] <span style="color:#f92672">-</span> df[<span style="color:#e6db74">&#39;Discount&#39;</span>] 
+</span></span></code></pre></div><p><img src="./image/total_price.jpg" alt="" /></p>
+<p><strong>Deleting Rows where Discount is equal to 0:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df <span style="color:#f92672">=</span> df[df[<span style="color:#e6db74">&#39;Discount&#39;</span>] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>]
+</span></span></code></pre></div><p><img src="./image/discount_remove.jpg" alt="" /></p>
+<p><strong>Saving the file:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>df<span style="color:#f92672">.</span>to_excel(<span style="color:#e6db74">&#39;final-results.xlsx&#39;</span>, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</span></span></code></pre></div><p>To save a dataframe to an Excel in pandas we use the <strong>to_excel</strong> function, and we pass it the name of the file. Note that the name of the file has to end with <strong>.xlsx</strong> which is the extension of an Excel workbook.</p>
+<p>We set <strong>index=False</strong>, to tell Pandas to not save the index column which is what we usually want since that column is generated by Pandas.</p>
+<p>Resulted Excel File:</p>
+<p><img src="./image/final.jpg" alt="" /></p>
+<p>As you can see on the resulted <strong>final-results.xlsx</strong> Excel workbook, we have got exactly what we needed without opening Excel at all. We automated the whole process using <strong>Python</strong> and the <strong>Pandas library</strong>.</p>
+<p>Now we can take the script and apply it to all our similar structured reports!</p>
+<h2 id="conclusion">
+  Conclusion
+  <a class="anchor" href="#conclusion">#</a>
+</h2>
+<p>Python and Pandas are a great combination to automate Excel workflows because they are easy to understand and use.</p>
+<p>Pandas dataframes are more powerful than Excel spreadsheets. In this article, we only scratched the surface on what this library can do to get beginners started.</p>
+<p>Deep dive into Python, Pandas and other libraries to open the full potential of automation!</p>
+<h1 id="working-with-openpyxl">
+  WORKING WITH OPENPYXL
+  <a class="anchor" href="#working-with-openpyxl">#</a>
+</h1>
+<p><img src="./image/openpyxl.jpg" alt="" /></p>
+<h2 id="introduction-on-openpyxl">
+  Introduction on openpyxl
+  <a class="anchor" href="#introduction-on-openpyxl">#</a>
+</h2>
+<p><strong>Openpyxl</strong> is an open-source python library used to read and write data from Excel 2010+ xlsx/xlsm files. The library is power and allows us to automate excel file at the cell level. We basically can achieve anything we can manually do in excel using this library and lines of Python code.</p>
+<h2 id="getting-started-1">
+  Getting started
+  <a class="anchor" href="#getting-started-1">#</a>
+</h2>
+<p>To get started we need to install the <strong>openpyxl</strong> library by going to the terminal or command prompt and type the following code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pip install openpyxl 
+</span></span></code></pre></div><h2 id="working-with-workbooks">
+  Working with workbooks
+  <a class="anchor" href="#working-with-workbooks">#</a>
+</h2>
+<p>Now that we have the library installed, we can either use it to load and existing Excel workbook or create an empty one first:</p>
+<h3 id="load-existing-workbook">
+  Load existing workbook
+  <a class="anchor" href="#load-existing-workbook">#</a>
+</h3>
+<p>To load an existing excel file we import the load_workbook class, instantiate it by passing the path of the xlsx file as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> openpyxl <span style="color:#f92672">import</span> load_workbook
+</span></span><span style="display:flex;"><span>wb <span style="color:#f92672">=</span> load_workbook(<span style="color:#e6db74">&#39;sales_data.xlsx&#39;</span>)
+</span></span></code></pre></div><h3 id="create-new-workbook">
+  Create new workbook
+  <a class="anchor" href="#create-new-workbook">#</a>
+</h3>
+<p>To create a new Excel workbook we call the Workbook class from the <strong>openpyxl</strong> library, and instantiate it.</p>
+<p>The created workbook will be completely empty and only have one worksheet names Sheet by default.</p>
+<p><em>Note that we don’t give a file name right away, but in the end when saving the file.</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> openpyxl <span style="color:#f92672">import</span> Workbook
+</span></span><span style="display:flex;"><span>wb <span style="color:#f92672">=</span> Workbook()
+</span></span></code></pre></div><h3 id="save-a-workbook">
+  Save a workbook
+  <a class="anchor" href="#save-a-workbook">#</a>
+</h3>
+<p>To save a workbook we use the save method which takes the file name as input. <strong>Note</strong> that the file name is a string that must end with <strong>.xlsx</strong></p>
+<p>Keep in mind that if you save a file under the same name as another file that is located in the same directory, the original file will get overwritten by the new one.</p>
+<p>One more thing to keep in mind is that you <strong>MUST CLOSE THE FILE IN EXCEL</strong> before saving it., otherwise you will get an error and the file won’t be saved.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>wb<span style="color:#f92672">.</span>save(<span style="color:#e6db74">&#39;ExcelFileName.xlsx&#39;</span>)
+</span></span></code></pre></div><h3 id="working-with-worksheets">
+  Working with worksheets
+  <a class="anchor" href="#working-with-worksheets">#</a>
+</h3>
+<p>We can get all worksheets present in an Excel workbook. We need to get specific sheets in order to either get data from them or assign data to them.</p>
+<p><strong>Get active sheet</strong></p>
+<p>To get the active sheet we use the following code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ws <span style="color:#f92672">=</span> wb<span style="color:#f92672">.</span>active
+</span></span></code></pre></div><p>**Get sheet by name **</p>
+<p>To get any sheet by its name we use the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ws <span style="color:#f92672">=</span> wb[<span style="color:#e6db74">&#39;Sheet1&#39;</span>]
+</span></span></code></pre></div><p><strong>Get all sheets name</strong></p>
+<p>In order to get all the names of the sheets that are present in an excel workbook, we use the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>wb<span style="color:#f92672">.</span>sheetnames
+</span></span></code></pre></div><p><strong>Create new sheet</strong></p>
+<p>We can also create new sheets using the create_sheet method on the workbook which takes the sheet name as argument:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>wb<span style="color:#f92672">.</span>create_sheet(<span style="color:#e6db74">&#39;NewSheet&#39;</span>)
+</span></span></code></pre></div><p><strong>Get and set sheet title</strong></p>
+<p>We can get and set current selected sheet titles.</p>
+<p>To get sheet title</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>title 
+</span></span></code></pre></div><p>to set sheet title</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Sheet2&#39;</span>
+</span></span></code></pre></div><h2 id="working-with-cells-rows-columns-and-ranges">
+  Working with Cells, Rows, Columns, and Ranges
+  <a class="anchor" href="#working-with-cells-rows-columns-and-ranges">#</a>
+</h2>
+<p>Getting and setting cells values</p>
+<p>Using <strong>openpyxl</strong>, we can go as deep as getting and setting data as the cells level, which is the same level of control we have on excel. Not only getting and setting data, but also, we van add style, <strong>Formulas</strong>, and <strong>Charts</strong>.</p>
+<p>To get the value of a specific cell, we use the following syntax:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ws[<span style="color:#e6db74">&#39;B4&#39;</span>]<span style="color:#f92672">.</span>value
+</span></span></code></pre></div><p>In the above example we use cell <strong>B4</strong>, but we can use any cell.</p>
+<p>To set the value of a certain cell, we use the following code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ws[<span style="color:#e6db74">&#39;B4&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Cup&#39;</span>
+</span></span><span style="display:flex;"><span>ws[<span style="color:#e6db74">&#39;B4&#39;</span>]<span style="color:#f92672">.</span>value
+</span></span></code></pre></div><p>In the above example we set the string Cup to cell B4.</p>
+<p>However, setting cells values individually isn’t the best way. We can add entire rows of data at once using the append method, and passing cell values as a list.</p>
+<p>Appending entire rows of data at once</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>append([<span style="color:#e6db74">&#39;test1&#39;</span>, <span style="color:#e6db74">&#39;test2&#39;</span>, <span style="color:#e6db74">&#39;test3&#39;</span>, <span style="color:#e6db74">&#39;test4&#39;</span>])
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">```</span>python
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Here<span style="color:#960050;background-color:#1e0010">’</span>s an example that illustrates what happens when we add entire rows at once:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">```</span>python
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Append multiple rows </span>
+</span></span><span style="display:flex;"><span>ws <span style="color:#f92672">=</span> wb<span style="color:#f92672">.</span>active
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>append([<span style="color:#e6db74">&#39;test1&#39;</span>, <span style="color:#e6db74">&#39;test2&#39;</span>, <span style="color:#e6db74">&#39;test3&#39;</span>, <span style="color:#e6db74">&#39;test4&#39;</span>])
+</span></span><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>append([<span style="color:#e6db74">&#39;test5&#39;</span>, <span style="color:#e6db74">&#39;test6&#39;</span>, <span style="color:#e6db74">&#39;test3&#39;</span>, ])
+</span></span><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>append([<span style="color:#e6db74">&#39;&#39;</span>, <span style="color:#e6db74">&#39;test7&#39;</span>, <span style="color:#e6db74">&#39;test8&#39;</span>])
+</span></span><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>append([<span style="color:#e6db74">&#39;test9&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>, <span style="color:#e6db74">&#39;test10&#39;</span>])
+</span></span><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>append([<span style="color:#e6db74">&#39;test11&#39;</span>, <span style="color:#e6db74">&#39;test12&#39;</span>, <span style="color:#e6db74">&#39;&#39;</span>, <span style="color:#e6db74">&#39;test13&#39;</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>wb<span style="color:#f92672">.</span>save(<span style="color:#e6db74">&#39;test-file.xlsx&#39;</span>)
+</span></span></code></pre></div><p><em>Note that if we pass empty value in the list, we will get empty cells.</em></p>
+<p>Here’s the resulted file:</p>
+<p><img src="./image/test_file.jpg" alt="" /></p>
+<h3 id="merging-and-unmerging-a-range-of-cells">
+  Merging and unmerging a range of cells
+  <a class="anchor" href="#merging-and-unmerging-a-range-of-cells">#</a>
+</h3>
+<p>To merge ranges using this library, same as we do in Excel, we use the <strong>merge_cells</strong> method which takes a range as input:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>merge_cells(<span style="color:#e6db74">&#39;A1:D3&#39;</span>)
+</span></span></code></pre></div><p><em>Note that we can lose that if the cells are not empty before merging them.</em></p>
+<p>To unmerge cells that have been merged before, we use the <strong>unmerge</strong> method and we pass it the desired range:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>unmerge_cells(<span style="color:#e6db74">&#39;A1:D3&#39;</span>)
+</span></span></code></pre></div><h3 id="inserting-empty-rows">
+  Inserting empty rows
+  <a class="anchor" href="#inserting-empty-rows">#</a>
+</h3>
+<p>To insert an entire empty row, we use the <strong>insert_rows</strong> method, and we pass it the position:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>insert_rows(<span style="color:#ae81ff">3</span>)
+</span></span></code></pre></div><h3 id="deleting-an-entire-row">
+  Deleting an entire row
+  <a class="anchor" href="#deleting-an-entire-row">#</a>
+</h3>
+<p>To delete rows, empty or not, we use the <strong>delete_row</strong>s method which takes the row’s position as input:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>delete_rows(<span style="color:#ae81ff">3</span>)
+</span></span></code></pre></div><h3 id="inserting-an-empty-column">
+  Inserting an empty column
+  <a class="anchor" href="#inserting-an-empty-column">#</a>
+</h3>
+<p>To insert columns, we use the <strong>insert_cols</strong> method which takes the column’s position as input:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>insert_cols(<span style="color:#ae81ff">2</span>)
+</span></span></code></pre></div><h3 id="deleting-an-entire-column">
+  Deleting an entire column
+  <a class="anchor" href="#deleting-an-entire-column">#</a>
+</h3>
+<p>To delete columns, empty or not, we use the <strong>delete_cols</strong> method which takes the column’s position as input:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>delete_cols(<span style="color:#ae81ff">2</span>)
+</span></span></code></pre></div><p>In the coming example we will <strong>add 4 filled columns and 5 filled rows</strong>, then add an <strong>empty column</strong> at position 2 and one <strong>empty row</strong> at position 3:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ws <span style="color:#f92672">=</span> wb<span style="color:#f92672">.</span>active
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>append([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>])
+</span></span><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>append([<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>])
+</span></span><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>append([<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>])
+</span></span><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>append([<span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">16</span>])
+</span></span><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>append([<span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">20</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>insert_rows(<span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>insert_cols(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>wb<span style="color:#f92672">.</span>save(<span style="color:#e6db74">&#39;test-file2.xlsx&#39;</span>)
+</span></span></code></pre></div><p>Here’s the resulted file:</p>
+<p><img src="./image/test_file_2.jpg" alt="" /></p>
+<p>Moving an entire range of cells</p>
+<p>To move an entire range of cells, we use the move_range method which takes the range as input, as we as by how many rows and columns the range should move:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>move_range(<span style="color:#e6db74">&#39;A2:D8&#39;</span>, rows<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, cols<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+</span></span></code></pre></div><p>Here’s an example to better illustrate the move_range:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ws <span style="color:#f92672">=</span> wb<span style="color:#f92672">.</span>active
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>append([<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>])
+</span></span><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>append([<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>])
+</span></span><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>append([<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">12</span>])
+</span></span><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>append([<span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">16</span>])
+</span></span><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>append([<span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">20</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>move_range(<span style="color:#e6db74">&#39;A1:D5&#39;</span>, rows<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>, cols<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>wb<span style="color:#f92672">.</span>save(<span style="color:#e6db74">&#39;test-file3.xlsx&#39;</span>)
+</span></span></code></pre></div><p>Here’s the resulted excel file:</p>
+<p><img src="./image/test_file_3.jpg" alt="" /></p>
+<h2 id="use-excel-supported-formulas">
+  Use Excel supported formulas
+  <a class="anchor" href="#use-excel-supported-formulas">#</a>
+</h2>
+<p>We reference the cell and pass in the desired formula as a string. One of the advantages of the openpyxl library is that the formula appears on the Excel file, same as when we define it manually on the excel worksheet.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ws[<span style="color:#e6db74">&#39;cell&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;formula&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">```</span>python
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Here<span style="color:#960050;background-color:#1e0010">’</span>s an example of using the SUM formula to calculate the total sum of the prices 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">```</span>python
+</span></span><span style="display:flex;"><span>wb <span style="color:#f92672">=</span> Workbook()
+</span></span><span style="display:flex;"><span>ws <span style="color:#f92672">=</span> wb<span style="color:#f92672">.</span>active
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>rows <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    [<span style="color:#e6db74">&#39;Id&#39;</span>, <span style="color:#e6db74">&#39;Quantity&#39;</span>, <span style="color:#e6db74">&#39;Price&#39;</span>, <span style="color:#e6db74">&#39;Solde&#39;</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#e6db74">&#39;id-001&#39;</span>, <span style="color:#ae81ff">27</span>, <span style="color:#ae81ff">129.99</span>, <span style="color:#ae81ff">24</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#e6db74">&#39;id-002&#39;</span>, <span style="color:#ae81ff">144</span>, <span style="color:#ae81ff">24.99</span>, <span style="color:#ae81ff">30</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#e6db74">&#39;id-003&#39;</span>, <span style="color:#ae81ff">57</span>, <span style="color:#ae81ff">35.99</span>, <span style="color:#ae81ff">45</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#e6db74">&#39;id-004&#39;</span>, <span style="color:#ae81ff">67</span>, <span style="color:#ae81ff">15.99</span>, <span style="color:#ae81ff">40</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#e6db74">&#39;id-005&#39;</span>, <span style="color:#ae81ff">44</span>, <span style="color:#ae81ff">30.99</span>, <span style="color:#ae81ff">30</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#e6db74">&#39;id-006&#39;</span>, <span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">25.99</span>, <span style="color:#ae81ff">35</span>],
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> row <span style="color:#f92672">in</span> rows:
+</span></span><span style="display:flex;"><span>    ws<span style="color:#f92672">.</span>append(row)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>ws[<span style="color:#e6db74">&#39;C9&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;=SUM(C2:C7)&#39;</span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>wb<span style="color:#f92672">.</span>save(<span style="color:#e6db74">&#39;SUM-formula-file.xlsx&#39;</span>)
+</span></span></code></pre></div><p>Results</p>
+<p><img src="./image/sum_formula.jpg" alt="" /></p>
+<p>As you can see, we have <strong>SUM</strong> of the prices on cell <strong>C9</strong>, and when clicking on the cell, we see that the formula appears on the fx field above, same as when we enter the function manually.</p>
+<h2 id="working-with-charts">
+  Working with Charts
+  <a class="anchor" href="#working-with-charts">#</a>
+</h2>
+<p>We can create all sorts of excel supported chart using <strong>openpyxl</strong> easily. The process will always be the same for all types of charts.</p>
+<ul>
+<li>We import the specific chart class desired as well as the Reference class from the openpyxl</li>
+<li>We instantiate the Reference object by passing the data as a range</li>
+<li>We instantiate the chart object</li>
+<li>We pass the referenced data to the chart</li>
+<li>We set the title, axis names, legends and any other info</li>
+<li>We add colors if desired to</li>
+<li>We assign the chart to a sheet at a certain start position</li>
+</ul>
+<h3 id="available-charts">
+  Available charts
+  <a class="anchor" href="#available-charts">#</a>
+</h3>
+<p>We can check all available charts that the library provides on the official documentation at this link: <a href="https://openpyxl.readthedocs.io/en/stable/charts/introduction.html">https://openpyxl.readthedocs.io/en/stable/charts/introduction.html</a></p>
+<p>The documentation also provides code snippets and examples.</p>
+<p><img src="./image/chart.jpg" alt="" /></p>
+<h3 id="for-our-tutorial-we-will-see-how-to-make-a-beginner-friendly-line-chart">
+  For our tutorial we will see how to make a beginner friendly Line Chart
+  <a class="anchor" href="#for-our-tutorial-we-will-see-how-to-make-a-beginner-friendly-line-chart">#</a>
+</h3>
+<p><strong>First</strong>, we import the <strong>Workbook class</strong> to create a new workbook, the <strong>LineChart</strong> to create a line chart, The Reference class to get and pass the required data to the chart, and finally the <strong>date</strong> class since we will be using some dates in the data.</p>
+<p>We instantiate a new workbook, and get the active worksheet.</p>
+<p><strong>Secondly</strong>, we define the data as a list of lists, and named the variable rows. This makes easy to iterate over it as well as modify it later. We then loop over the rows and append them to the Excel sheet using the append method.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> openpyxl <span style="color:#f92672">import</span> Workbook
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> openpyxl.chart <span style="color:#f92672">import</span> LineChart, Reference
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> datetime <span style="color:#f92672">import</span> date
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>wb <span style="color:#f92672">=</span> Workbook()
+</span></span><span style="display:flex;"><span>ws <span style="color:#f92672">=</span> wb<span style="color:#f92672">.</span>active
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add data to active sheet</span>
+</span></span><span style="display:flex;"><span>rows <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    [<span style="color:#e6db74">&#39;Date&#39;</span>, <span style="color:#e6db74">&#39;Batch 1&#39;</span>, <span style="color:#e6db74">&#39;Batch 2&#39;</span>, <span style="color:#e6db74">&#39;Batch 3&#39;</span>],
+</span></span><span style="display:flex;"><span>    [date(<span style="color:#ae81ff">2015</span>,<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">1</span>), <span style="color:#ae81ff">40</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">25</span>],
+</span></span><span style="display:flex;"><span>    [date(<span style="color:#ae81ff">2015</span>,<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">2</span>), <span style="color:#ae81ff">40</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">30</span>],
+</span></span><span style="display:flex;"><span>    [date(<span style="color:#ae81ff">2015</span>,<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">3</span>), <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">45</span>],
+</span></span><span style="display:flex;"><span>    [date(<span style="color:#ae81ff">2015</span>,<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">4</span>), <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">40</span>],
+</span></span><span style="display:flex;"><span>    [date(<span style="color:#ae81ff">2015</span>,<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">5</span>), <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">30</span>],
+</span></span><span style="display:flex;"><span>    [date(<span style="color:#ae81ff">2015</span>,<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">6</span>), <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">40</span>, <span style="color:#ae81ff">35</span>],
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> row <span style="color:#f92672">in</span> rows:
+</span></span><span style="display:flex;"><span>    ws<span style="color:#f92672">.</span>append(row)
+</span></span></code></pre></div><p><strong>Thirdly</strong>, we instantiate the <strong>LineChart object</strong>, then setup up some properties like the title, the style, and the axis titles of the Chart.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Setup the Chart    </span>
+</span></span><span style="display:flex;"><span>c1 <span style="color:#f92672">=</span> LineChart()
+</span></span><span style="display:flex;"><span>c1<span style="color:#f92672">.</span>title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Line Chart&#34;</span>
+</span></span><span style="display:flex;"><span>c1<span style="color:#f92672">.</span>style <span style="color:#f92672">=</span> <span style="color:#ae81ff">13</span>
+</span></span><span style="display:flex;"><span>c1<span style="color:#f92672">.</span>y_axis<span style="color:#f92672">.</span>title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Size&#39;</span>
+</span></span><span style="display:flex;"><span>c1<span style="color:#f92672">.</span>x_axis<span style="color:#f92672">.</span>title <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Test Number&#39;</span>
+</span></span></code></pre></div><p><em>Note that we have different styles that we can call by given a number, in this example we choose style 13. Check out the rest of styles on the official documentation.</em></p>
+<p><strong>Forth</strong>, we instantiate the Reference object, and pass the sheet and the range of the data on the sheet. Our data range is A1:D6, if the we take the first column it will become B1:D7. Meaning from column 2 to column 4, and from row 1 to row 7</p>
+<p>We the pass the Referenced data to the chart object using the add_data method. Note that we set titles_from_data to true since we referenced the header with the data (row 1)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>data <span style="color:#f92672">=</span> Reference(ws, min_col<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, min_row<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, max_col<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>, max_row<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>)
+</span></span><span style="display:flex;"><span>c1<span style="color:#f92672">.</span>add_data(data, titles_from_data<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><p>Now we style our lines. In this examples data we have 3 columns (<em>Batch 1, Batch2, and Batch3</em>) that we want to visualize as time goes on.</p>
+<p>We use series to get each column of data (<em>line</em>). series[0] is for line 1, series[1] is for line 2, and series[2] is for line 3.</p>
+<p>After getting each line we can set the color, the symbols, the with and so on, same as using excel. To see the full list of the properties, check out the official documentation of <strong>openpyxl</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Style Line 1</span>
+</span></span><span style="display:flex;"><span>s1 <span style="color:#f92672">=</span> c1<span style="color:#f92672">.</span>series[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>s1<span style="color:#f92672">.</span>marker<span style="color:#f92672">.</span>symbol <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;triangle&#34;</span>
+</span></span><span style="display:flex;"><span>s1<span style="color:#f92672">.</span>marker<span style="color:#f92672">.</span>graphicalProperties<span style="color:#f92672">.</span>solidFill <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;FF0000&#34;</span> <span style="color:#75715e"># Marker filling</span>
+</span></span><span style="display:flex;"><span>s1<span style="color:#f92672">.</span>marker<span style="color:#f92672">.</span>graphicalProperties<span style="color:#f92672">.</span>line<span style="color:#f92672">.</span>solidFill <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;FF0000&#34;</span> <span style="color:#75715e"># Marker outline</span>
+</span></span><span style="display:flex;"><span>s1<span style="color:#f92672">.</span>graphicalProperties<span style="color:#f92672">.</span>line<span style="color:#f92672">.</span>noFill <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Style Line 2</span>
+</span></span><span style="display:flex;"><span>s2 <span style="color:#f92672">=</span> c1<span style="color:#f92672">.</span>series[<span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>s2<span style="color:#f92672">.</span>graphicalProperties<span style="color:#f92672">.</span>line<span style="color:#f92672">.</span>solidFill <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;00AAAA&#34;</span>
+</span></span><span style="display:flex;"><span>s2<span style="color:#f92672">.</span>graphicalProperties<span style="color:#f92672">.</span>line<span style="color:#f92672">.</span>dashStyle <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;sysDot&#34;</span>
+</span></span><span style="display:flex;"><span>s2<span style="color:#f92672">.</span>graphicalProperties<span style="color:#f92672">.</span>line<span style="color:#f92672">.</span>width <span style="color:#f92672">=</span> <span style="color:#ae81ff">100050</span> <span style="color:#75715e"># width in EMUs</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Style line 3</span>
+</span></span><span style="display:flex;"><span>s3 <span style="color:#f92672">=</span> c1<span style="color:#f92672">.</span>series[<span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span>s3<span style="color:#f92672">.</span>smooth <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span> <span style="color:#75715e"># Make the line smooth</span>
+</span></span></code></pre></div><p>We then add the chart to desired sheet at a specific cell. In our example we added the chart to the active sheet at cell F1.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Add chart to sheet </span>
+</span></span><span style="display:flex;"><span>ws<span style="color:#f92672">.</span>add_chart(c1, <span style="color:#e6db74">&#34;F1&#34;</span>)
+</span></span></code></pre></div><p>We finally save the workbook.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Save Workbook</span>
+</span></span><span style="display:flex;"><span>wb<span style="color:#f92672">.</span>save(<span style="color:#e6db74">&#39;chart-file.xlsx&#39;</span>)
+</span></span></code></pre></div><p>Here’s the resulted file. From the left we can see the data we added, and on the right, starting from cell F1 we can see our Chart.</p>
+<p><img src="./image/finaly_chart.jpg" alt="" /></p>
+<h2 id="using-lookups-in-openpyxl">
+  Using Lookups in openpyxl
+  <a class="anchor" href="#using-lookups-in-openpyxl">#</a>
+</h2>
+<p><strong>Example</strong></p>
+<h1 id="lookup-using-both-pure-python-as-well-as-using-a-formula">
+  Lookup using both pure python as well as using a formula
+  <a class="anchor" href="#lookup-using-both-pure-python-as-well-as-using-a-formula">#</a>
+</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> openpyxl <span style="color:#f92672">import</span> Workbook
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>wb <span style="color:#f92672">=</span> Workbook()
+</span></span><span style="display:flex;"><span>ws <span style="color:#f92672">=</span> wb<span style="color:#f92672">.</span>active
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>rows <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    [<span style="color:#e6db74">&#39;Id&#39;</span>, <span style="color:#e6db74">&#39;Quantity&#39;</span>, <span style="color:#e6db74">&#39;Price&#39;</span>, <span style="color:#e6db74">&#39;Solde&#39;</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#e6db74">&#39;id-001&#39;</span>, <span style="color:#ae81ff">27</span>, <span style="color:#ae81ff">129.99</span>, <span style="color:#ae81ff">24</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#e6db74">&#39;id-002&#39;</span>, <span style="color:#ae81ff">144</span>, <span style="color:#ae81ff">24.99</span>, <span style="color:#ae81ff">30</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#e6db74">&#39;id-003&#39;</span>, <span style="color:#ae81ff">57</span>, <span style="color:#ae81ff">35.99</span>, <span style="color:#ae81ff">45</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#e6db74">&#39;id-004&#39;</span>, <span style="color:#ae81ff">67</span>, <span style="color:#ae81ff">15.99</span>, <span style="color:#ae81ff">40</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#e6db74">&#39;id-005&#39;</span>, <span style="color:#ae81ff">44</span>, <span style="color:#ae81ff">30.99</span>, <span style="color:#ae81ff">30</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#e6db74">&#39;id-006&#39;</span>, <span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">25.99</span>, <span style="color:#ae81ff">35</span>],
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> row <span style="color:#f92672">in</span> rows:
+</span></span><span style="display:flex;"><span>    ws<span style="color:#f92672">.</span>append(row)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">```</span>python
+</span></span><span style="display:flex;"><span>ws[<span style="color:#e6db74">&#39;F1&#39;</span>]<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Id&#39;</span>
+</span></span><span style="display:flex;"><span>ws[<span style="color:#e6db74">&#39;G1&#39;</span>]<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Price&#39;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ws[<span style="color:#e6db74">&#39;F2&#39;</span>]<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;id-004&#39;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> row <span style="color:#f92672">in</span> ws<span style="color:#f92672">.</span>rows:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> row[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>value <span style="color:#f92672">==</span> ws[<span style="color:#e6db74">&#39;F2&#39;</span>]<span style="color:#f92672">.</span>value:
+</span></span><span style="display:flex;"><span>        ws[<span style="color:#e6db74">&#39;G2&#39;</span>] <span style="color:#f92672">=</span> row[<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>value
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ws[<span style="color:#e6db74">&#39;G4&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;=LOOKUP(F2, A1:A7,C1:C7)&#39;</span>   
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>wb<span style="color:#f92672">.</span>save(<span style="color:#e6db74">&#39;lookup-file.xlsx&#39;</span>) 
+</span></span></code></pre></div><p><strong>Results</strong></p>
+<p><img src="./image/lookup.jpg" alt="" /></p>
+<h2 id="conclusion-1">
+  Conclusion
+  <a class="anchor" href="#conclusion-1">#</a>
+</h2>
+<p><strong>Openpyxl</strong> provides powerful methods to automate excel at the cell level. We basically have the full control of any workbook either create or load. This library is very extensive, and have a lot of details to it, that’s why one should always refer back to the documentation.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#in-excel-using-python-pandas-and-openpyxl">In Excel using Python, Pandas, and Openpyxl</a></li>
+    <li><a href="#files">Files</a></li>
+    <li><a href="#introduction">Introduction</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#introduction-1">Introduction</a></li>
+    <li><a href="#why-automating-excel">Why Automating Excel</a></li>
+    <li><a href="#why-using-python">Why using Python</a></li>
+    <li><a href="#why-using-pandas">Why using Pandas</a></li>
+    <li><a href="#installing-python">Installing Python</a></li>
+    <li><a href="#installing-pandas">Installing Pandas</a></li>
+    <li><a href="#best-way-to-apply-the-automation">Best way to apply the automation</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#working-with-columns-in-pandas">Working with columns in pandas</a></li>
+    <li><a href="#working-with-rows-in-pandas">Working with rows in pandas</a></li>
+    <li><a href="#data-aggregation--aggregate-functions">Data aggregation – Aggregate Functions</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#introduction-on-openpyxl">Introduction on openpyxl</a></li>
+    <li><a href="#getting-started-1">Getting started</a></li>
+    <li><a href="#working-with-workbooks">Working with workbooks</a>
+      <ul>
+        <li><a href="#load-existing-workbook">Load existing workbook</a></li>
+        <li><a href="#create-new-workbook">Create new workbook</a></li>
+        <li><a href="#save-a-workbook">Save a workbook</a></li>
+        <li><a href="#working-with-worksheets">Working with worksheets</a></li>
+      </ul>
+    </li>
+    <li><a href="#working-with-cells-rows-columns-and-ranges">Working with Cells, Rows, Columns, and Ranges</a>
+      <ul>
+        <li><a href="#merging-and-unmerging-a-range-of-cells">Merging and unmerging a range of cells</a></li>
+        <li><a href="#inserting-empty-rows">Inserting empty rows</a></li>
+        <li><a href="#deleting-an-entire-row">Deleting an entire row</a></li>
+        <li><a href="#inserting-an-empty-column">Inserting an empty column</a></li>
+        <li><a href="#deleting-an-entire-column">Deleting an entire column</a></li>
+      </ul>
+    </li>
+    <li><a href="#use-excel-supported-formulas">Use Excel supported formulas</a></li>
+    <li><a href="#working-with-charts">Working with Charts</a>
+      <ul>
+        <li><a href="#available-charts">Available charts</a></li>
+        <li><a href="#for-our-tutorial-we-will-see-how-to-make-a-beginner-friendly-line-chart">For our tutorial we will see how to make a beginner friendly Line Chart</a></li>
+      </ul>
+    </li>
+    <li><a href="#using-lookups-in-openpyxl">Using Lookups in openpyxl</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#conclusion-1">Conclusion</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

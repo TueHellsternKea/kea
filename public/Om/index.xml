@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tue Hellstern :: Kea</title>
+    <link>http://example.org/Om/</link>
+    <description>Recent content on Tue Hellstern :: Kea</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://example.org/Om/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tue hellstern</title>
+      <link>http://example.org/Om/tuehellstern/</link>
+      <pubDate>Sat, 15 Oct 2022 21:36:36 +0200</pubDate>
+      
+      <guid>http://example.org/Om/tuehellstern/</guid>
+      <description>Tue Hellstern#Ansat på Kea i 2019 som underviser på Datamatiker uddannelsen.
+I 2020 skifter jeg til Økonomi og IT
+Jeg underviser primært på:
+4 semester Valgfag Erfaring#Jeg har siden 1995 arbejdet som selvstændig IT-konsulent med fokus på:
+Programmering af løsninger for virksomheder Data og databaser Project ledelse, både Agil og mere traditionel Undervisning af specielt virksomheder Undervisning#Ud over Kea underviser jeg også på DTU i Ballerup.</description>
+    </item>
+    
+  </channel>
+</rss>

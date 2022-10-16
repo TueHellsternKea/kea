@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="What is Docker#Docker is an open platform for developing, shipping, and running applications.
+Docker is free software developed by Docker Inc. It was presented to the general public on March 13, 2013, and has become since that day a must in the world of IT development.
+Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://example.org/4.-Semester/04-docker/" />
+
+<title>04 Docker | Tue Hellstern :: Kea</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.8ad930aacb0091456fa5839232a69c3138f03ea2509331560429d17a72cec3a2.js" integrity="sha256-itkwqssAkUVvpYOSMqacMTjwPqJQkzFWBCnRenLOw6I=" crossorigin="anonymous"></script>
+<link rel="alternate" type="application/rss+xml" href="http://example.org/4.-Semester/04-docker/index.xml" title="Tue Hellstern :: Kea" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Tue Hellstern :: Kea</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6b5543328cac445d69ea9e222cb6025a" class="toggle" checked />
+    <label for="section-6b5543328cac445d69ea9e222cb6025a" class="flex justify-between">
+      <a href="/4.-Semester/" class="">4. Semester</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3e6198acbc93b3ce9e70719f4e0b73be" class="toggle" checked />
+    <label for="section-3e6198acbc93b3ce9e70719f4e0b73be" class="flex justify-between">
+      <a href="/4.-Semester/04-docker/" class="active">04 Docker</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-Semester/04-docker/DockerDesktop/" class="">Docker Desktop</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-156bef0ddf951024222acfda5464e042" class="toggle"  />
+    <label for="section-156bef0ddf951024222acfda5464e042" class="flex justify-between">
+      <a href="/5.-Semester/" class="">5. Semester</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1a9a2bf9c3796e10bc3195e7fc6122c3" class="toggle"  />
+    <label for="section-1a9a2bf9c3796e10bc3195e7fc6122c3" class="flex justify-between">
+      <a href="/5.-Semester/Know-Your-Data/" class="">Know Your Data</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dfc259a3c3e7f8cdef022dcf8ee6d77f" class="toggle"  />
+    <label for="section-dfc259a3c3e7f8cdef022dcf8ee6d77f" class="flex justify-between">
+      <a href="/5.-Semester/Know-Your-Data/etl/" class="">Etl</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-Semester/Know-Your-Data/etl/automate-excel/" class="">Automate Excel</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-Semester/Know-Your-Data/etl/excel-powerbi-etl/" class="">Excel Powerbi Etl</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-Semester/Know-Your-Data/etl/slides/ETL-slide/" class="">ETL</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ca61b7f16d93017dca45a3b63f69c5ad" class="toggle"  />
+    <label for="section-ca61b7f16d93017dca45a3b63f69c5ad" class="flex justify-between">
+      <a role="button" class="">Om</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Om/tuehellstern/" class="">Tue hellstern</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>04 Docker</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-docker-daemon">The Docker daemon</a></li>
+    <li><a href="#the-docker-client">The Docker client</a></li>
+    <li><a href="#docker-desktop">Docker Desktop</a></li>
+    <li><a href="#docker-registries">Docker registries</a></li>
+    <li><a href="#docker-objects">Docker objects</a></li>
+    <li><a href="#images">Images</a></li>
+    <li><a href="#containers">Containers</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#download-and-install">Download and Install</a></li>
+    <li><a href="#docker-demo">Docker demo</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><p><img src="https://www.docker.com/wp-content/uploads/2022/03/horizontal-logo-monochromatic-white.png" alt="" /></p>
+<h1 id="what-is-docker">
+  What is Docker
+  <a class="anchor" href="#what-is-docker">#</a>
+</h1>
+<p>Docker is an open platform for developing, shipping, and running applications.</p>
+<p>Docker is free software developed by Docker Inc. It was presented to the general public on March 13, 2013, and has become since that day a must in the world of IT development.</p>
+<p>Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications.</p>
+<p>By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.</p>
+<p><a href="https://www.docker.com/">www.docker.com</a></p>
+<h1 id="create-docker-hub-account">
+  Create Docker Hub account
+  <a class="anchor" href="#create-docker-hub-account">#</a>
+</h1>
+<p>Docker Hub is a hosted repository service provided by Docker for finding and sharing container images.</p>
+<p><strong>Create an account on Docker Hub.</strong></p>
+<p><img src="./_image/docker-hub-1.jpg" alt="tesdt" /></p>
+<p>When you have created the account you can upload your own Docker images and you have access to a lot of different Docker images.</p>
+<h1 id="is-docker-a-virtual-machine">
+  Is Docker a virtual machine?
+  <a class="anchor" href="#is-docker-a-virtual-machine">#</a>
+</h1>
+<p>It is one of the most asked questions about Docker. The answer is: <strong>actually, not quite</strong></p>
+<p>It may <em>look</em> like a virtual machine at first, but the functionality is not the same.</p>
+<p>Unlike Docker, a <strong>virtual machine will include a complete operating system</strong>. It will work independently and act like a computer.
+<strong>Docker will only share the resources</strong> of the host machine to run its environments.</p>
+<p><img src="https://www.docker.com/wp-content/uploads/Blog.-Are-containers-..VM-Image-1-1024x435.png" alt="" /></p>
+<h1 id="docker-architecture">
+  Docker architecture
+  <a class="anchor" href="#docker-architecture">#</a>
+</h1>
+<p>Docker uses a <strong>client-server architecture</strong>.</p>
+<p>The Docker <strong>client</strong> talks to the <strong>Docker daemon</strong>, which does the heavy lifting of building, running, and distributing your Docker containers.</p>
+<p>The Docker client and daemon can run on the same system, or you can connect a Docker client to a remote Docker daemon. The Docker client and daemon communicate using a REST API, over UNIX sockets or a network interface.</p>
+<p>Another Docker client is <strong>Docker Compose</strong>, that lets you work with applications consisting of a set of containers.</p>
+<p><img src="https://docs.docker.com/engine/images/architecture.svg" alt="" /></p>
+<h2 id="the-docker-daemon">
+  The Docker daemon
+  <a class="anchor" href="#the-docker-daemon">#</a>
+</h2>
+<p>The Docker daemon (<em>dockerd</em>) listens for Docker API requests and manages Docker objects such as images, containers, networks, and volumes. A daemon can also communicate with other daemons to manage Docker services.</p>
+<h2 id="the-docker-client">
+  The Docker client
+  <a class="anchor" href="#the-docker-client">#</a>
+</h2>
+<p>The Docker client (<em>docker</em>) is the primary way that many Docker users interact with Docker. When you use commands such as docker run, the client sends these commands to dockerd, which carries them out. The docker command uses the Docker API. The Docker client can communicate with more than one daemon.</p>
+<h2 id="docker-desktop">
+  Docker Desktop
+  <a class="anchor" href="#docker-desktop">#</a>
+</h2>
+<p><strong>Docker Desktop</strong> is an easy-to-install application for your <strong>Mac</strong> or <strong>Windows</strong> environment that enables you to build and share containerized applications and microservices.</p>
+<p>Docker Desktop includes the Docker daemon (<em>dockerd</em>), the Docker client (<em>docker</em>), Docker Compose, Docker Content Trust, Kubernetes, and Credential Helper.</p>
+<p><a href="./DockerDesktop.md">Docker Desktop</a></p>
+<h2 id="docker-registries">
+  Docker registries
+  <a class="anchor" href="#docker-registries">#</a>
+</h2>
+<p>A Docker registry stores Docker images. Docker Hub is a public registry that anyone can use, and Docker is configured to look for images on Docker Hub by default. You can even run your own private registry.</p>
+<p>When you use the docker pull or docker run commands, the required images are pulled from your configured registry. When you use the docker push command, your image is pushed to your configured registry.</p>
+<h2 id="docker-objects">
+  Docker objects
+  <a class="anchor" href="#docker-objects">#</a>
+</h2>
+<p>When you use Docker, you are creating and using images, containers, networks, volumes, plugins, and other objects. This section is a brief overview of some of those objects.</p>
+<h2 id="images">
+  Images
+  <a class="anchor" href="#images">#</a>
+</h2>
+<p>An image is a read-only template with instructions for creating a Docker container. Often, an image is based on another image, with some additional customization.</p>
+<p>For example, you may build an image which is based on the ubuntu image, but installs the Apache web server and your application, as well as the configuration details needed to make your application run.</p>
+<p>You might create your own images or you might only use those created by others and published in a registry. To build your own image, you create a Dockerfile with a simple syntax for defining the steps needed to create the image and run it.</p>
+<p>Each instruction in a Dockerfile creates a layer in the image. When you change the Dockerfile and rebuild the image, only those layers which have changed are rebuilt.</p>
+<p>This is part of what makes images so lightweight, small, and fast, when compared to other virtualization technologies.</p>
+<h2 id="containers">
+  Containers
+  <a class="anchor" href="#containers">#</a>
+</h2>
+<p>A container is a runnable instance of an image. You can create, start, stop, move, or delete a container using the Docker API or CLI.</p>
+<p>You can connect a container to one or more networks, attach storage to it, or even create a new image based on its current state.</p>
+<p>By default, a container is relatively well isolated from other containers and its host machine. You can control how isolated a container’s network, storage, or other underlying subsystems are from other containers or from the host machine.</p>
+<p>A container is defined by its image as well as any configuration options you provide to it when you create or start it. When a container is removed, any changes to its state that are not stored in persistent storage disappear.</p>
+<h1 id="docker-desktop-1">
+  Docker Desktop
+  <a class="anchor" href="#docker-desktop-1">#</a>
+</h1>
+<p>The Docker Desktop application makes it easy for you to work with Docker. There are versions of Docker Desktop for; <em>macOS</em>, <em>Windows</em> and <em>Linux</em></p>
+<h2 id="download-and-install">
+  Download and Install
+  <a class="anchor" href="#download-and-install">#</a>
+</h2>
+<p>You can download the version you need her: <a href="https://www.docker.com/products/docker-desktop/">www.docker.com/products/docker-desktop</a></p>
+<ul>
+<li><a href="https://docs.docker.com/desktop/windows/install/">Install Docker Desktop on <strong>Windows</strong></a></li>
+<li><a href="https://docs.docker.com/desktop/mac/install/">Install Docker Desktop on <strong>Mac</strong></a></li>
+</ul>
+<h2 id="docker-demo">
+  Docker demo
+  <a class="anchor" href="#docker-demo">#</a>
+</h2>
+<p>The GitHub Repository - <a href="https://github.com/TueHellsternKea/docker-demo.git">https://github.com/TueHellsternKea/docker-demo.git</a> - containes different guides on Docker</p>
+<h1 id="links">
+  Links
+  <a class="anchor" href="#links">#</a>
+</h1>
+<ul>
+<li><a href="https://www.docker.com/">www.docker.com</a></li>
+<li><a href="https://docs.docker.com/get-started/overview/">docs.docker.com/get-started/overview</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/container-docker-introduction/docker-defined">Microsoft - What is Docker</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/app-service/tutorial-custom-container?pivots=container-linux">Migrate custom software to Azure App Service using a custom container</a></li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-docker-daemon">The Docker daemon</a></li>
+    <li><a href="#the-docker-client">The Docker client</a></li>
+    <li><a href="#docker-desktop">Docker Desktop</a></li>
+    <li><a href="#docker-registries">Docker registries</a></li>
+    <li><a href="#docker-objects">Docker objects</a></li>
+    <li><a href="#images">Images</a></li>
+    <li><a href="#containers">Containers</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#download-and-install">Download and Install</a></li>
+    <li><a href="#docker-demo">Docker demo</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

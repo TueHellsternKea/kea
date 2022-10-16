@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ETL #Extract - Transform - Load #Data sources #Can you name some data sources? #Why ETL?#Analyze business data for taking critical business decisions Transactional databases cannot answer complex business questions Provides a method of moving the data from various sources into a data warehouse Allow verification of data transformation, aggregation and calculations rules ETL process can perform complex transformations ETL helps to Migrate data into a Data Warehouse Tools #Can you name some ETL tools?">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="ETL" />
+<meta property="og:description" content="ETL #Extract - Transform - Load #Data sources #Can you name some data sources? #Why ETL?#Analyze business data for taking critical business decisions Transactional databases cannot answer complex business questions Provides a method of moving the data from various sources into a data warehouse Allow verification of data transformation, aggregation and calculations rules ETL process can perform complex transformations ETL helps to Migrate data into a Data Warehouse Tools #Can you name some ETL tools?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/5.-Semester/Know-Your-Data/etl/slides/ETL-slide/" /><meta property="article:section" content="5. Semester" />
+
+<meta property="article:modified_time" content="2022-10-16T12:12:12+02:00" />
+
+<title>ETL | Tue Hellstern :: Kea</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.8ad930aacb0091456fa5839232a69c3138f03ea2509331560429d17a72cec3a2.js" integrity="sha256-itkwqssAkUVvpYOSMqacMTjwPqJQkzFWBCnRenLOw6I=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Tue Hellstern :: Kea</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6b5543328cac445d69ea9e222cb6025a" class="toggle"  />
+    <label for="section-6b5543328cac445d69ea9e222cb6025a" class="flex justify-between">
+      <a href="/4.-Semester/" class="">4. Semester</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3e6198acbc93b3ce9e70719f4e0b73be" class="toggle"  />
+    <label for="section-3e6198acbc93b3ce9e70719f4e0b73be" class="flex justify-between">
+      <a href="/4.-Semester/04-docker/" class="">04 Docker</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-Semester/04-docker/DockerDesktop/" class="">Docker Desktop</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-156bef0ddf951024222acfda5464e042" class="toggle" checked />
+    <label for="section-156bef0ddf951024222acfda5464e042" class="flex justify-between">
+      <a href="/5.-Semester/" class="">5. Semester</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1a9a2bf9c3796e10bc3195e7fc6122c3" class="toggle" checked />
+    <label for="section-1a9a2bf9c3796e10bc3195e7fc6122c3" class="flex justify-between">
+      <a href="/5.-Semester/Know-Your-Data/" class="">Know Your Data</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dfc259a3c3e7f8cdef022dcf8ee6d77f" class="toggle" checked />
+    <label for="section-dfc259a3c3e7f8cdef022dcf8ee6d77f" class="flex justify-between">
+      <a href="/5.-Semester/Know-Your-Data/etl/" class="">Etl</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-Semester/Know-Your-Data/etl/automate-excel/" class="">Automate Excel</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-Semester/Know-Your-Data/etl/excel-powerbi-etl/" class="">Excel Powerbi Etl</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-Semester/Know-Your-Data/etl/slides/ETL-slide/" class="active">ETL</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ca61b7f16d93017dca45a3b63f69c5ad" class="toggle"  />
+    <label for="section-ca61b7f16d93017dca45a3b63f69c5ad" class="flex justify-between">
+      <a role="button" class="">Om</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Om/tuehellstern/" class="">Tue hellstern</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>ETL</strong>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="etl----fit---">
+  ETL <!-- raw HTML omitted -->
+  <a class="anchor" href="#etl----fit---">#</a>
+</h1>
+<h1 id="extract---transform---load----fit---">
+  Extract - Transform - Load <!-- raw HTML omitted -->
+  <a class="anchor" href="#extract---transform---load----fit---">#</a>
+</h1>
+<hr>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="data-sources----fit---">
+  Data sources <!-- raw HTML omitted -->
+  <a class="anchor" href="#data-sources----fit---">#</a>
+</h1>
+<h2 id="can-you-name-some-data-sources----fit---">
+  Can you name some data sources? <!-- raw HTML omitted -->
+  <a class="anchor" href="#can-you-name-some-data-sources----fit---">#</a>
+</h2>
+<hr>
+<p><img src="./image/Extract-Transform-And-Load-Data-Integration-Process.png" alt="" /></p>
+<hr>
+<h1 id="why-etl">
+  Why ETL?
+  <a class="anchor" href="#why-etl">#</a>
+</h1>
+<ul>
+<li>Analyze business data for taking critical business decisions</li>
+<li>Transactional databases cannot answer complex business questions</li>
+<li>Provides a method of moving the data from various sources into a data warehouse</li>
+<li>Allow verification of data transformation, aggregation and calculations rules</li>
+<li>ETL process can perform complex transformations</li>
+<li>ETL helps to Migrate data into a Data Warehouse</li>
+</ul>
+<hr>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="tools----fit---">
+  Tools <!-- raw HTML omitted -->
+  <a class="anchor" href="#tools----fit---">#</a>
+</h1>
+<h2 id="can-you-name-some-etl-tools----fit---">
+  Can you name some ETL tools? <!-- raw HTML omitted -->
+  <a class="anchor" href="#can-you-name-some-etl-tools----fit---">#</a>
+</h2>
+<hr>
+<p><img src="./image/hero_desktop.jpg" alt="bg right:50% 200%" /></p>
+<h1 id="tools">
+  Tools
+  <a class="anchor" href="#tools">#</a>
+</h1>
+<ul>
+<li>Excel (<em>Windows version</em>)
+<ul>
+<li>Get and transform</li>
+<li>Power Query Editor (<em>DAX</em>)</li>
+<li>VBA</li>
+<li>Office Script</li>
+</ul>
+</li>
+<li>Python</li>
+<li>MySQL</li>
+<li>Microsoft Power Platform
+<ul>
+<li>Power BI (<em>Desktop</em>)</li>
+<li>Power Apps</li>
+<li>Power Automate</li>
+<li>Power Virtual Agents</li>
+</ul>
+</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
