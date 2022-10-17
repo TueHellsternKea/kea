@@ -5,15 +5,14 @@ weight: 10
 
 # Module 4.2
 
-## Introduction
-
-### Slides
+# Slides Introduktion
 - [html](./introduction.html)
 - [pdf](./introduction.pdf)
 
-# Teaching Sessions
+# Kode eksempler
+Mine kode eksempler ligger på GitHub: [github.com/TueHellsternKea/4_sem_code](https://github.com/TueHellsternKea/4_sem_code)
 
-![](./image/oversigt.jpg)
+# Teaching Sessions
 
 - [Python brushup, MySQL, Dash and Azure](./01-Python-brushup_and_Docker_1/README.md)
     - 04-10-2022 - Tirsdag

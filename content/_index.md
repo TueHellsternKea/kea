@@ -1,9 +1,10 @@
 ---
 bookCollapseSection: true
-weight: 10
+weight: 1
 ---
 
 # Undervisning på Kea
+
 ## Tue Hellstern
 Jeg brugere dette site til mine undervisnings materialer, slides, kode stumper, projekter osv.
 

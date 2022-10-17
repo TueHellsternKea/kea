@@ -16,6 +16,29 @@ By taking advantage of Docker’s methodologies for shipping, testing, and deplo
 
 [www.docker.com](https://www.docker.com/)
 
+# Docker Desktop
+**Docker Desktop** is an easy-to-install application for your **Mac** or **Windows** environment that enables you to build and share containerized applications and microservice. 
+
+Docker Desktop includes the Docker daemon (*dockerd*), the Docker client (*docker*), Docker Compose, Docker Content Trust, Kubernetes, and Credential Helper. 
+
+The Docker Desktop application makes it easy for you to work with Docker. There are versions of Docker Desktop for; *macOS*, *Windows* and *Linux*
+
+## Download and Install
+You can download the version you need her: [www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop/)
+
+- [Install Docker Desktop on **Windows**](https://docs.docker.com/desktop/windows/install/)
+- [Install Docker Desktop on **Mac**](https://docs.docker.com/desktop/mac/install/)
+
+## Verify Docker
+You can verify that Docker are working byt thise Docker command:
+
+    docker run hello-world
+
+
+
+## Docker demo
+The GitHub Repository - [https://github.com/TueHellsternKea/docker-demo.git](https://github.com/TueHellsternKea/docker-demo.git) - contains different guides on Docker.
+
 # Create Docker Hub account
 Docker Hub is a hosted repository service provided by Docker for finding and sharing container images.
 
@@ -81,24 +104,10 @@ By default, a container is relatively well isolated from other containers and it
 
 A container is defined by its image as well as any configuration options you provide to it when you create or start it. When a container is removed, any changes to its state that are not stored in persistent storage disappear.
 
-# Docker Desktop
-**Docker Desktop** is an easy-to-install application for your **Mac** or **Windows** environment that enables you to build and share containerized applications and microservice. 
-
-Docker Desktop includes the Docker daemon (*dockerd*), the Docker client (*docker*), Docker Compose, Docker Content Trust, Kubernetes, and Credential Helper. 
-
-The Docker Desktop application makes it easy for you to work with Docker. There are versions of Docker Desktop for; *macOS*, *Windows* and *Linux*
-
-## Download and Install
-You can download the version you need her: [www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop/)
-
-- [Install Docker Desktop on **Windows**](https://docs.docker.com/desktop/windows/install/)
-- [Install Docker Desktop on **Mac**](https://docs.docker.com/desktop/mac/install/)
-
-## Docker demo
-The GitHub Repository - [https://github.com/TueHellsternKea/docker-demo.git](https://github.com/TueHellsternKea/docker-demo.git) - contains different guides on Docker.
-
 # Links
 - [www.docker.com](https://www.docker.com/)
 - [docs.docker.com/get-started/overview](https://docs.docker.com/get-started/overview/)
 - [Microsoft - What is Docker](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/container-docker-introduction/docker-defined)
 - [Migrate custom software to Azure App Service using a custom container](https://docs.microsoft.com/en-us/azure/app-service/tutorial-custom-container?pivots=container-linux)
+
+
