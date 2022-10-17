@@ -35,7 +35,6 @@ You can verify that Docker are working byt thise Docker command:
     docker run hello-world
 
 
-
 ## Docker demo
 The GitHub Repository - [https://github.com/TueHellsternKea/docker-demo.git](https://github.com/TueHellsternKea/docker-demo.git) - contains different guides on Docker.
 
@@ -103,6 +102,39 @@ You can connect a container to one or more networks, attach storage to it, or ev
 By default, a container is relatively well isolated from other containers and its host machine. You can control how isolated a container’s network, storage, or other underlying subsystems are from other containers or from the host machine.
 
 A container is defined by its image as well as any configuration options you provide to it when you create or start it. When a container is removed, any changes to its state that are not stored in persistent storage disappear.
+
+# Useful commands for Docker
+This is a list of commands that may be useful to you on Docker
+
+## List your images
+    docker image ls
+
+## Delete a specific image.
+    docker image rm [image name]
+
+## Delete all existing images.
+    docker image rm $(docker images -a -q)
+
+## List all existing containers (running and not running).
+    docker ps -a
+
+## Change a container name at running time.
+    docker run --name [container name] [image name]
+
+## Stop a specific container.
+    docker stop [container name]
+
+## Stop all running containers.
+    docker stop $(docker ps -a -q)
+
+## Delete a specific container (only if stopped).
+    docker rm [container name]
+
+## Delete all containers (only if stopped).
+    docker rm $(docker ps -a -q)
+
+## Display logs of a container.
+    docker logs [container name]
 
 # Links
 - [www.docker.com](https://www.docker.com/)
