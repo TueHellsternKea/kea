@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://tuehkea.netlify.app/'
 languageCode = 'en-us'
 title = 'Tue Hellstern :: Kea'
 theme = 'hugo-book'
