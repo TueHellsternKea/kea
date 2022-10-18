@@ -43,7 +43,7 @@ Docker Hub is a hosted repository service provided by Docker for finding and sha
 
 **Create an account on Docker Hub.**
 
-![tesdt](./_image/docker-hub-1.jpg)
+![](./_image/docker-hub-1.jpg)
 
 When you have created the account you can upload your own Docker images and you have access to a lot of different Docker images.
 
