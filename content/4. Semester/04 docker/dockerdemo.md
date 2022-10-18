@@ -86,15 +86,41 @@ where **some-mysql** is the name you want to assign to your container, **my-secr
 
 It could be
 
-    docker run -p 3308:3308 --name my-mysql -e MYSQL_ROOT_PASSWORD=Kea1234#! -d mysql:latest
+    docker run -p 3308:3306 --name my-mysql -e MYSQL_ROOT_PASSWORD=Kea1234#! -d mysql:latest
 
-The **-p 3308:3308** is the definition of the port the MySQL server are using
+- The **-p 3308:3306** is the definition of the port the MySQL server are using
+- Password: **Kea1234#!**
+
+Standard port number for MySQL is 3306, but this number are you using for the local MySQL server you have on the computer. You have to get a new port number.
+
+The port number definition is:
+- localhost:container
+- 3308:3306
+
+    docker exec -it my-mysql mysql -uroot -p
+
 
 ## Docker Desktop
 ![](./_image/mysq-docker-desktop.jpg)
 
+# Access to MySQL Server
+Now yo need to access the MySQL Server.
 
+## From an terminal
+From a terminal you can use:
 
+    docker exec -it my-mysql mysql -uroot -p
+
+for access to the server. Use the password you created.
+
+![](./_image/sql_access_1.jpg)
+
+## From MySQL Workbench
+From MySQL Workbench you have to use:
+
+Hostname: localhost
+Port: 3308
+Username: root
 
 # Link
 - You can finde more information about this Docker file at [https://hub.docker.com/_/mysql](https://hub.docker.com/_/mysql)
