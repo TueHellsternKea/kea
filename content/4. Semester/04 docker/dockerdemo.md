@@ -122,7 +122,7 @@ Hostname: localhost
 Port: 3308
 Username: root
 
-![](./_image/workbench.jpg)
+![](/static/workbench.jpg)
 
 # Link
 - You can finde more information about this Docker file at [https://hub.docker.com/_/mysql](https://hub.docker.com/_/mysql)
