@@ -69,3 +69,33 @@ The launce of your application are done in 2 parts
     docker run python-demo
 
 ![](./_image/docker-run-first.jpg)
+
+
+# MySQL Docker
+![](https://raw.githubusercontent.com/docker-library/docs/c408469abbac35ad1e4a50a6618836420eb9502e/mysql/logo.png)
+
+# Get MySQL Docker image
+
+    docker pull mysql
+
+# Start a mysql server instance
+
+    docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
+
+where **some-mysql** is the name you want to assign to your container, **my-secret-pw** is the password to be set for the MySQL **root user** and **tag** is the tag specifying the **MySQL version** you want.
+
+It could be
+
+    docker run -p 3308:3308 --name my-mysql -e MYSQL_ROOT_PASSWORD=Kea1234#! -d mysql:latest
+
+The **-p 3308:3308** is the definition of the port the MySQL server are using
+
+## Docker Desktop
+![](./_image/mysq-docker-desktop.jpg)
+
+
+
+
+# Link
+- You can finde more information about this Docker file at [https://hub.docker.com/_/mysql](https://hub.docker.com/_/mysql)
+- Git repo of the Docker "Official Image" for mysql [github.com/docker-library/mysql](https://github.com/docker-library/mysql)
