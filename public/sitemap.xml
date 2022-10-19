@@ -2,44 +2,53 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/4.-Semester/04-docker/</loc>
-    <lastmod>2022-10-16T15:50:25+02:00</lastmod>
+    <loc>/</loc>
+    <lastmod>2022-10-17T14:30:47+02:00</lastmod>
   </url><url>
-    <loc>http://example.org/4.-Semester/</loc>
+    <loc>/4.-Semester/04-docker/</loc>
+    <lastmod>2022-10-18T20:38:51+02:00</lastmod>
+  </url><url>
+    <loc>/4.-Semester/</loc>
+    <lastmod>2022-10-17T14:30:47+02:00</lastmod>
+  </url><url>
+    <loc>/5.-Semester/</loc>
     <lastmod>2022-10-16T12:12:12+02:00</lastmod>
   </url><url>
-    <loc>http://example.org/5.-Semester/</loc>
+    <loc>/5.-Semester/Know-Your-Data/</loc>
     <lastmod>2022-10-16T12:12:12+02:00</lastmod>
   </url><url>
-    <loc>http://example.org/5.-Semester/Know-Your-Data/</loc>
+    <loc>/5.-Semester/Know-Your-Data/etl/</loc>
     <lastmod>2022-10-16T12:12:12+02:00</lastmod>
   </url><url>
-    <loc>http://example.org/5.-Semester/Know-Your-Data/etl/</loc>
+    <loc>/4.-Semester/04-docker/dockerdemo/</loc>
+    <lastmod>2022-10-18T23:00:54+02:00</lastmod>
+  </url><url>
+    <loc>/4.-Semester/04-docker/dockercompose/</loc>
+    <lastmod>2022-10-18T20:21:31+02:00</lastmod>
+  </url><url>
+    <loc>/4.-Semester/04-docker/dockertroubleshooting/</loc>
+    <lastmod>2022-10-17T14:30:47+02:00</lastmod>
+  </url><url>
+    <loc>/Om/tuehellstern/</loc>
     <lastmod>2022-10-16T12:12:12+02:00</lastmod>
   </url><url>
-    <loc>http://example.org/</loc>
+    <loc>/Om/</loc>
     <lastmod>2022-10-16T12:12:12+02:00</lastmod>
   </url><url>
-    <loc>http://example.org/Om/tuehellstern/</loc>
+    <loc>/4.-Semester/04-docker/DockerDesktop/</loc>
+    <lastmod>2022-10-18T23:00:54+02:00</lastmod>
+  </url><url>
+    <loc>/5.-Semester/Know-Your-Data/etl/automate-excel/</loc>
     <lastmod>2022-10-16T12:12:12+02:00</lastmod>
   </url><url>
-    <loc>http://example.org/Om/</loc>
+    <loc>/5.-Semester/Know-Your-Data/etl/excel-powerbi-etl/</loc>
     <lastmod>2022-10-16T12:12:12+02:00</lastmod>
   </url><url>
-    <loc>http://example.org/4.-Semester/04-docker/DockerDesktop/</loc>
-    <lastmod>2022-10-16T15:50:25+02:00</lastmod>
+    <loc>/categories/</loc>
   </url><url>
-    <loc>http://example.org/5.-Semester/Know-Your-Data/etl/automate-excel/</loc>
+    <loc>/5.-Semester/Know-Your-Data/etl/slides/ETL-slide/</loc>
     <lastmod>2022-10-16T12:12:12+02:00</lastmod>
   </url><url>
-    <loc>http://example.org/5.-Semester/Know-Your-Data/etl/excel-powerbi-etl/</loc>
-    <lastmod>2022-10-16T12:12:12+02:00</lastmod>
-  </url><url>
-    <loc>http://example.org/categories/</loc>
-  </url><url>
-    <loc>http://example.org/5.-Semester/Know-Your-Data/etl/slides/ETL-slide/</loc>
-    <lastmod>2022-10-16T12:12:12+02:00</lastmod>
-  </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>/tags/</loc>
   </url>
 </urlset>

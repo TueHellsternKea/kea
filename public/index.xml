@@ -2,16 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tue Hellstern :: Kea</title>
-    <link>http://example.org/</link>
+    <link>/</link>
     <description>Recent content on Tue Hellstern :: Kea</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>/4.-Semester/04-docker/dockerdemo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/4.-Semester/04-docker/dockerdemo/</guid>
+      <description>Create your fist Docker application#The purpose of this Docker application is to create a Python program that print/displays a sentence.
+The Python program will have to be launched through Dockerfile.
+Note: You must have install Docker on your computer
+Create the application#You have to create a folder on your computer - minfirstdockerapp
+It must contain the following two files:
+main.py - Python file containing the code to be executed Dockerfile - Docker file that will contain the necessary instructions to create the environment main.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/4.-Semester/04-docker/dockercompose/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/4.-Semester/04-docker/dockercompose/</guid>
+      <description>Docker Compose#Docker is used to manage an individual container for your application.
+Docker-Compose is used to manage several containers at the same time for the same application. This tool offers the same features as Docker but allows you to have more complex applications.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/4.-Semester/04-docker/dockertroubleshooting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/4.-Semester/04-docker/dockertroubleshooting/</guid>
+      <description>Docker Troubleshooting#Hardware assisted virtualization and data execution protection must be enabled in the BIOS#If you get this error message starting Docker Desktop, it indicates that there is a problem with Hyper-V.
+The problem with Hyper-V that is disabled or Hypervisor agent not running.
+If Hyper-V is totally disabled or not installed#You can try 2 differst ways
+#Go to Control Panel -&amp;gt; [Programs] -&amp;gt; [Windows Features] Check Windows Hypervisor-platform Restart the system PowerShell#Open PowerShell as administrator and</description>
+    </item>
+    
     <item>
       <title>Tue hellstern</title>
-      <link>http://example.org/Om/tuehellstern/</link>
+      <link>/Om/tuehellstern/</link>
       <pubDate>Sat, 15 Oct 2022 21:36:36 +0200</pubDate>
       
-      <guid>http://example.org/Om/tuehellstern/</guid>
+      <guid>/Om/tuehellstern/</guid>
       <description>Tue Hellstern#Ansat på Kea i 2019 som underviser på Datamatiker uddannelsen.
 I 2020 skifter jeg til Økonomi og IT
 Jeg underviser primært på:
@@ -21,19 +57,19 @@ Programmering af løsninger for virksomheder Data og databaser Project ledelse, 
     
     <item>
       <title></title>
-      <link>http://example.org/4.-Semester/04-docker/DockerDesktop/</link>
+      <link>/4.-Semester/04-docker/DockerDesktop/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/4.-Semester/04-docker/DockerDesktop/</guid>
+      <guid>/4.-Semester/04-docker/DockerDesktop/</guid>
       <description>Docker Desktop#</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://example.org/5.-Semester/Know-Your-Data/etl/automate-excel/</link>
+      <link>/5.-Semester/Know-Your-Data/etl/automate-excel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/5.-Semester/Know-Your-Data/etl/automate-excel/</guid>
+      <guid>/5.-Semester/Know-Your-Data/etl/automate-excel/</guid>
       <description>Automate data processing#In Excel using Python, Pandas, and Openpyxl#Files#Excel
 sales_data.xlsx sales_data.xlsx Jupyter Lab
 Real_world_example.ipynb demo.ipynb openpyxl-chart-notebook.ipynb openpyxl-tutorial.ipynb Introduction#This is all about automating Microsoft Excel using python and two different libraries.
@@ -42,10 +78,10 @@ The first library is Pandas. This library is used to process dataframes at high 
     
     <item>
       <title></title>
-      <link>http://example.org/5.-Semester/Know-Your-Data/etl/excel-powerbi-etl/</link>
+      <link>/5.-Semester/Know-Your-Data/etl/excel-powerbi-etl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/5.-Semester/Know-Your-Data/etl/excel-powerbi-etl/</guid>
+      <guid>/5.-Semester/Know-Your-Data/etl/excel-powerbi-etl/</guid>
       <description>Home
 Excel and ETL#Excel and Power BI has a powerful data analysis pack named Get and Transform (previously known as Power Query).
 It is an ETL pack for cleaning and sorting raw data from a range of input sources, such as CSV and text files.
@@ -54,10 +90,10 @@ In this age of data lakes and petabyte-scale databases, it is shocking how frequ
     
     <item>
       <title>ETL</title>
-      <link>http://example.org/5.-Semester/Know-Your-Data/etl/slides/ETL-slide/</link>
+      <link>/5.-Semester/Know-Your-Data/etl/slides/ETL-slide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/5.-Semester/Know-Your-Data/etl/slides/ETL-slide/</guid>
+      <guid>/5.-Semester/Know-Your-Data/etl/slides/ETL-slide/</guid>
       <description>ETL #Extract - Transform - Load #Data sources #Can you name some data sources? #Why ETL?#Analyze business data for taking critical business decisions Transactional databases cannot answer complex business questions Provides a method of moving the data from various sources into a data warehouse Allow verification of data transformation, aggregation and calculations rules ETL process can perform complex transformations ETL helps to Migrate data into a Data Warehouse Tools #Can you name some ETL tools?</description>
     </item>
     

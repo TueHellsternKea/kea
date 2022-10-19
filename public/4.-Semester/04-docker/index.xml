@@ -2,16 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tue Hellstern :: Kea</title>
-    <link>http://example.org/4.-Semester/04-docker/</link>
+    <link>/4.-Semester/04-docker/</link>
     <description>Recent content on Tue Hellstern :: Kea</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://example.org/4.-Semester/04-docker/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="/4.-Semester/04-docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://example.org/4.-Semester/04-docker/DockerDesktop/</link>
+      <link>/4.-Semester/04-docker/dockerdemo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/4.-Semester/04-docker/DockerDesktop/</guid>
+      <guid>/4.-Semester/04-docker/dockerdemo/</guid>
+      <description>Create your fist Docker application#The purpose of this Docker application is to create a Python program that print/displays a sentence.
+The Python program will have to be launched through Dockerfile.
+Note: You must have install Docker on your computer
+Create the application#You have to create a folder on your computer - minfirstdockerapp
+It must contain the following two files:
+main.py - Python file containing the code to be executed Dockerfile - Docker file that will contain the necessary instructions to create the environment main.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/4.-Semester/04-docker/dockercompose/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/4.-Semester/04-docker/dockercompose/</guid>
+      <description>Docker Compose#Docker is used to manage an individual container for your application.
+Docker-Compose is used to manage several containers at the same time for the same application. This tool offers the same features as Docker but allows you to have more complex applications.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/4.-Semester/04-docker/dockertroubleshooting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/4.-Semester/04-docker/dockertroubleshooting/</guid>
+      <description>Docker Troubleshooting#Hardware assisted virtualization and data execution protection must be enabled in the BIOS#If you get this error message starting Docker Desktop, it indicates that there is a problem with Hyper-V.
+The problem with Hyper-V that is disabled or Hypervisor agent not running.
+If Hyper-V is totally disabled or not installed#You can try 2 differst ways
+#Go to Control Panel -&amp;gt; [Programs] -&amp;gt; [Windows Features] Check Windows Hypervisor-platform Restart the system PowerShell#Open PowerShell as administrator and</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/4.-Semester/04-docker/DockerDesktop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/4.-Semester/04-docker/DockerDesktop/</guid>
       <description>Docker Desktop#</description>
     </item>
     

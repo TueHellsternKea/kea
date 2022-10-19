@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Create your fist Docker application#The purpose of this Docker application is to create a Python program that print/displays a sentence.
+The Python program will have to be launched through Dockerfile.
+Note: You must have install Docker on your computer
+Create the application#You have to create a folder on your computer - minfirstdockerapp
+It must contain the following two files:
+main.py - Python file containing the code to be executed Dockerfile - Docker file that will contain the necessary instructions to create the environment main.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
+<meta property="og:description" content="Create your fist Docker application#The purpose of this Docker application is to create a Python program that print/displays a sentence.
+The Python program will have to be launched through Dockerfile.
+Note: You must have install Docker on your computer
+Create the application#You have to create a folder on your computer - minfirstdockerapp
+It must contain the following two files:
+main.py - Python file containing the code to be executed Dockerfile - Docker file that will contain the necessary instructions to create the environment main." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/4.-Semester/04-docker/dockerdemo/" /><meta property="article:section" content="4. Semester" />
+
+<meta property="article:modified_time" content="2022-10-18T23:00:54+02:00" />
+
+<title>Dockerdemo | Tue Hellstern :: Kea</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" >
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.1db5a139453743051eb2e0c6a0fcb67bae9a3b48de86d8d9992f1ee79c347560.js" ></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Tue Hellstern :: Kea</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-6b5543328cac445d69ea9e222cb6025a" class="toggle" checked />
+    <label for="section-6b5543328cac445d69ea9e222cb6025a" class="flex justify-between">
+      <a href="/4.-Semester/" class="">4. Semester</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-3e6198acbc93b3ce9e70719f4e0b73be" class="toggle" checked />
+    <label for="section-3e6198acbc93b3ce9e70719f4e0b73be" class="flex justify-between">
+      <a href="/4.-Semester/04-docker/" class="">04 Docker</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-60e0a39b65acbb92684e0dc73c12687b" class="toggle" checked />
+    <label for="section-60e0a39b65acbb92684e0dc73c12687b" class="flex justify-between">
+      <a href="/4.-Semester/04-docker/dockerdemo/" class="active">Dockerdemo</a>
+    </label>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-52c75c6a8a98574b9418e9793dc78313" class="toggle"  />
+    <label for="section-52c75c6a8a98574b9418e9793dc78313" class="flex justify-between">
+      <a href="/4.-Semester/04-docker/dockercompose/" class="">Dockercompose</a>
+    </label>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8c0804728defde31e8377311b56b6bc9" class="toggle"  />
+    <label for="section-8c0804728defde31e8377311b56b6bc9" class="flex justify-between">
+      <a href="/4.-Semester/04-docker/dockertroubleshooting/" class="">Dockertroubleshooting</a>
+    </label>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/4.-Semester/04-docker/DockerDesktop/" class="">Docker Desktop</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-156bef0ddf951024222acfda5464e042" class="toggle"  />
+    <label for="section-156bef0ddf951024222acfda5464e042" class="flex justify-between">
+      <a href="/5.-Semester/" class="">5. Semester</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-1a9a2bf9c3796e10bc3195e7fc6122c3" class="toggle"  />
+    <label for="section-1a9a2bf9c3796e10bc3195e7fc6122c3" class="flex justify-between">
+      <a href="/5.-Semester/Know-Your-Data/" class="">Know Your Data</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-dfc259a3c3e7f8cdef022dcf8ee6d77f" class="toggle"  />
+    <label for="section-dfc259a3c3e7f8cdef022dcf8ee6d77f" class="flex justify-between">
+      <a href="/5.-Semester/Know-Your-Data/etl/" class="">Etl</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-Semester/Know-Your-Data/etl/automate-excel/" class="">Automate Excel</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-Semester/Know-Your-Data/etl/excel-powerbi-etl/" class="">Excel Powerbi Etl</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/5.-Semester/Know-Your-Data/etl/slides/ETL-slide/" class="">ETL</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ca61b7f16d93017dca45a3b63f69c5ad" class="toggle"  />
+    <label for="section-ca61b7f16d93017dca45a3b63f69c5ad" class="flex justify-between">
+      <a role="button" class="">Om</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/Om/tuehellstern/" class="">Tue hellstern</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Dockerdemo</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#create-the-application">Create the application</a>
+      <ul>
+        <li><a href="#mainpy">main.py</a></li>
+        <li><a href="#dockerfile">Dockerfile</a></li>
+      </ul>
+    </li>
+    <li><a href="#run-the-application">Run the application</a>
+      <ul>
+        <li><a href="#build">Build</a></li>
+        <li><a href="#launch">Launch</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#files">Files</a></li>
+    <li><a href="#steps">Steps</a></li>
+    <li><a href="#installing-python-and-pandas-onto-our-system-and-making-the-python-application">Installing Python and Pandas onto our system and making the Python application</a></li>
+    <li><a href="#creating-a-docker-image-file-which-will-be-used-to-make-a-container">Creating a Docker Image file which will be used to make a Container</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#get-mysql-docker-image">Get MySQL Docker image</a></li>
+    <li><a href="#start-a-mysql-server-instance">Start a mysql server instance</a></li>
+    <li><a href="#docker-desktop">Docker Desktop</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#from-an-terminal">From an terminal</a></li>
+    <li><a href="#from-mysql-workbench">From MySQL Workbench</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="create-your-fist-docker-application">
+  Create your fist Docker application
+  <a class="anchor" href="#create-your-fist-docker-application">#</a>
+</h1>
+<p>The purpose of this Docker application is to create a Python program that print/displays a sentence.</p>
+<p>The Python program will have to be launched through Dockerfile.</p>
+<p>Note: You must have install Docker on your computer</p>
+<h2 id="create-the-application">
+  Create the application
+  <a class="anchor" href="#create-the-application">#</a>
+</h2>
+<p>You have to create a folder on your computer - minfirstdockerapp</p>
+<p>It must contain the following two files:</p>
+<ul>
+<li><strong>main.py</strong> - <em>Python file containing the code to be executed</em></li>
+<li><strong>Dockerfile</strong> - <em>Docker file that will contain the necessary instructions to create the environment</em></li>
+</ul>
+<h3 id="mainpy">
+  main.py
+  <a class="anchor" href="#mainpy">#</a>
+</h3>
+<p>The main.py file is very simpel for this demo</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Welcome to your first Docker app&#34;</span>)
+</span></span></code></pre></div><h3 id="dockerfile">
+  Dockerfile
+  <a class="anchor" href="#dockerfile">#</a>
+</h3>
+<p>The purpose of this Docker file is to run your Python code.</p>
+<p>To do this, your Docker must contain all the dependencies necessary to launch Python. A Linux (<em>Ubuntu</em>) with Python installed on it should do the trick.</p>
+<p>First step in creating the Dockerfile is to access the DockerHub website - <a href="https://hub.docker.com">hub.docker.com</a></p>
+<p>The DockerHub website contains many pre-designed images you can use. For this case, type <strong>Python</strong> in the search bar.</p>
+<p><img src="./_image/python_dockerhub.jpg" alt="" /></p>
+<p>The first result is the official image to execute Python.</p>
+<p>You must create a Dockerfile and add this commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#75715e"># Importing the base image.</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> python:latest</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># To launch your python code, you must import it into our image.</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Use the keyword &#39;COPY&#39; to do that.</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># The first parameter &#39;main.py&#39; is the name of the file on the host.</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># The second parameter &#39;/&#39; is the path where to put the file on the image.</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> main.py /<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># You need to define the command to launch when you run the image.</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Use the keyword &#39;CMD&#39; to do that.</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">CMD</span> [ <span style="color:#e6db74">&#34;python&#34;</span>, <span style="color:#e6db74">&#34;./main.py&#34;</span> ]<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p>Remember that the Dockerfile doesn&rsquo;t have a file extension</p>
+<h2 id="run-the-application">
+  Run the application
+  <a class="anchor" href="#run-the-application">#</a>
+</h2>
+<p>The launce of your application are done in 2 parts</p>
+<h3 id="build">
+  Build
+  <a class="anchor" href="#build">#</a>
+</h3>
+<pre><code>docker build -t python-demo . 
+</code></pre>
+<p><img src="./_image/docker%20build.jpg" alt="" /></p>
+<h3 id="launch">
+  Launch
+  <a class="anchor" href="#launch">#</a>
+</h3>
+<pre><code>docker run python-demo
+</code></pre>
+<p><img src="./_image/docker-run-first.jpg" alt="" /></p>
+<p><img src="/static/image/pandaspythondocker.jpg" alt="" /></p>
+<h1 id="using-pandas-python-and-docker">
+  Using Pandas, Python and Docker
+  <a class="anchor" href="#using-pandas-python-and-docker">#</a>
+</h1>
+<p>Using a Docker container to run a Python application using Pandas library to import the <strong>customers.csv</strong> file.</p>
+<p><img src="customers_csv.jpg" alt="customeres_csv" /></p>
+<p>You are going to use:</p>
+<ul>
+<li><strong>Docker</strong></li>
+<li><strong>Python</strong></li>
+<li><strong>Pandas</strong></li>
+</ul>
+<p>In the development of a applications you need a consistent environment across all your devices.
+It can be time consuming to install all the dependencies from scratch whenever you try to run your code on a new device or in a new environment.</p>
+<blockquote>
+<p><strong>Docker is here to solve exactly this problem.</strong></p>
+</blockquote>
+<p>Docker provides a way to package everything you need to run your applications in a Container which you can download or pull into all the devices you use and just start working right away.</p>
+<h2 id="files">
+  Files
+  <a class="anchor" href="#files">#</a>
+</h2>
+<p>The files for this demo i located in the folder <strong>docker-demo</strong></p>
+<ul>
+<li>customers.csv</li>
+<li>demo1_app.py</li>
+<li>Dockerfile</li>
+</ul>
+<h2 id="steps">
+  Steps
+  <a class="anchor" href="#steps">#</a>
+</h2>
+<p>There are 3 steps in this demo:</p>
+<ol>
+<li>Installing Python and Pandas onto our system and making the Python application</li>
+<li>Creating a Docker Image file which will be used to make a Container</li>
+<li>Testing the container</li>
+</ol>
+<h2 id="installing-python-and-pandas-onto-our-system-and-making-the-python-application">
+  Installing Python and Pandas onto our system and making the Python application
+  <a class="anchor" href="#installing-python-and-pandas-onto-our-system-and-making-the-python-application">#</a>
+</h2>
+<ol>
+<li>Install Python, <em>if its NOT on on your system</em></li>
+<li>Install Pandas, <em>if its NOT on on your system</em></li>
+</ol>
+<pre tabindex="0"><code>pip3 install pandas
+</code></pre><ol start="3">
+<li>Create a project directory <strong>docker_demo_pandas</strong></li>
+<li>Copy the file <strong>customers.csv</strong> to this directory</li>
+<li>In this folder, make a new python file - <strong>demo_pandas_app.py</strong></li>
+<li>Write this code in the <strong>demo_pandas_app.py</strong> file</li>
+</ol>
+<pre tabindex="0"><code>import pandas as pd
+df = pd.read_csv(&#39;customers.csv&#39;)
+print(df.head(10))
+</code></pre><ol start="6">
+<li>Run the Python file to make sure that everything is working</li>
+</ol>
+<h2 id="creating-a-docker-image-file-which-will-be-used-to-make-a-container">
+  Creating a Docker Image file which will be used to make a Container
+  <a class="anchor" href="#creating-a-docker-image-file-which-will-be-used-to-make-a-container">#</a>
+</h2>
+<ol>
+<li>Install Docker, <em>if its NOT on your system</em>, by going to there website and following the installation steps - <a href="https://docs.docker.com/engine/install/">https://docs.docker.com/engine/install/</a></li>
+<li>Make a new file in your <strong>docker_demo_pandas</strong> directory and name it <strong>Dockerfile</strong>. <em>Be sure <strong>not</strong> give it an extension.</em></li>
+<li>Write this code in - <strong>Dockerfile</strong>:</li>
+</ol>
+<pre tabindex="0"><code># syntax=docker/dockerfile:1
+FROM python:3.8-slim-buster
+RUN /usr/local/bin/python -m pip install --upgrade pip
+RUN pip install pandas
+COPY . .
+CMD [ &#34;python&#34;, &#34;demo_pandas_app.py&#34;]
+</code></pre><ul>
+<li><strong>First line</strong> tells the docker engine on how to read/parse the lines coming after it. This line always has to be the first line before any spaces or characters</li>
+<li><strong>Second line</strong> downloads a base python image from Dockerhub. It is an environment that already has python installed on it</li>
+<li><strong>Third line</strong> upgrades the Pip as the above image is running an old version of it</li>
+<li><strong>Fourth line</strong> installs Pandas library in the image. This is a crucial step that we will also use to test our Docker image next</li>
+<li><strong>Fifth line</strong> copies all the files in the current directory and stores them onto the file system attached with the docker image</li>
+<li><strong>Sixth line</strong> tells Docker image on what to do when the Run command is given</li>
+</ul>
+<ol start="4">
+<li>Open to your <strong>commandpromt</strong> and make a docker image by typing:</li>
+</ol>
+<pre tabindex="0"><code>docker build --tag docker-demo1 .
+</code></pre><p><img src="docker_build.jpg" alt="docker_build" /></p>
+<p><em>Make sure that Docker demon is running</em></p>
+<h1 id="testing-the-container">
+  Testing the container
+  <a class="anchor" href="#testing-the-container">#</a>
+</h1>
+<ol>
+<li>Run the docker image by typing, in your commandpromt:</li>
+</ol>
+<pre tabindex="0"><code>docker run docker_demo_pandas
+</code></pre><p>Now you will see the Pandas dataframe on the screen.</p>
+<p><img src="docker_run.jpg" alt="docker_run" /></p>
+<p><strong>Rember</strong> - If you make any changes you have to run</p>
+<pre tabindex="0"><code>docker build --tag demo_pandas_app.py .
+</code></pre><p><strong>before</strong> you run</p>
+<pre tabindex="0"><code>docker run demo_pandas_app
+</code></pre><p><img src="https://raw.githubusercontent.com/docker-library/docs/c408469abbac35ad1e4a50a6618836420eb9502e/mysql/logo.png" alt="" /></p>
+<h1 id="mysql-and-docker">
+  MySQL and Docker
+  <a class="anchor" href="#mysql-and-docker">#</a>
+</h1>
+<h2 id="get-mysql-docker-image">
+  Get MySQL Docker image
+  <a class="anchor" href="#get-mysql-docker-image">#</a>
+</h2>
+<pre><code>docker pull mysql
+</code></pre>
+<h2 id="start-a-mysql-server-instance">
+  Start a mysql server instance
+  <a class="anchor" href="#start-a-mysql-server-instance">#</a>
+</h2>
+<pre><code>docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
+</code></pre>
+<p>where <strong>some-mysql</strong> is the name you want to assign to your container, <strong>my-secret-pw</strong> is the password to be set for the MySQL <strong>root user</strong> and <strong>tag</strong> is the tag specifying the <strong>MySQL version</strong> you want.</p>
+<p>It could be</p>
+<pre><code>docker run -p 3308:3306 --name my-mysql -e MYSQL_ROOT_PASSWORD=Kea1234#! -d mysql:latest
+</code></pre>
+<ul>
+<li>The <strong>-p 3308:3306</strong> is the definition of the port the MySQL server are using</li>
+<li>Password: <strong>Kea1234#!</strong></li>
+</ul>
+<p>Standard port number for MySQL is 3306, but this number are you using for the local MySQL server you have on the computer. You have to get a new port number.</p>
+<p>The port number definition is:</p>
+<ul>
+<li>
+<p>localhost:container</p>
+</li>
+<li>
+<p>3308:3306</p>
+<p>docker exec -it my-mysql mysql -uroot -p</p>
+</li>
+</ul>
+<h2 id="docker-desktop">
+  Docker Desktop
+  <a class="anchor" href="#docker-desktop">#</a>
+</h2>
+<p><img src="./_image/mysq-docker-desktop.jpg" alt="" /></p>
+<h1 id="access-to-mysql-server">
+  Access to MySQL Server
+  <a class="anchor" href="#access-to-mysql-server">#</a>
+</h1>
+<p>Now yo need to access the MySQL Server.</p>
+<h2 id="from-an-terminal">
+  From an terminal
+  <a class="anchor" href="#from-an-terminal">#</a>
+</h2>
+<p>From a terminal you can use:</p>
+<pre><code>docker exec -it my-mysql mysql -uroot -p
+</code></pre>
+<p>for access to the server. Use the password you created.</p>
+<p><img src="./_image/sql_access_1.jpg" alt="" /></p>
+<h2 id="from-mysql-workbench">
+  From MySQL Workbench
+  <a class="anchor" href="#from-mysql-workbench">#</a>
+</h2>
+<p>From MySQL Workbench you have to use:</p>
+<p>Hostname: localhost
+Port: 3308
+Username: root</p>
+<p><img src="/static/workbench.jpg" alt="" /></p>
+<h1 id="link">
+  Link
+  <a class="anchor" href="#link">#</a>
+</h1>
+<ul>
+<li>You can finde more information about this Docker file at <a href="https://hub.docker.com/_/mysql">https://hub.docker.com/_/mysql</a></li>
+<li>Git repo of the Docker &ldquo;Official Image&rdquo; for mysql <a href="https://github.com/docker-library/mysql">github.com/docker-library/mysql</a></li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#create-the-application">Create the application</a>
+      <ul>
+        <li><a href="#mainpy">main.py</a></li>
+        <li><a href="#dockerfile">Dockerfile</a></li>
+      </ul>
+    </li>
+    <li><a href="#run-the-application">Run the application</a>
+      <ul>
+        <li><a href="#build">Build</a></li>
+        <li><a href="#launch">Launch</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#files">Files</a></li>
+    <li><a href="#steps">Steps</a></li>
+    <li><a href="#installing-python-and-pandas-onto-our-system-and-making-the-python-application">Installing Python and Pandas onto our system and making the Python application</a></li>
+    <li><a href="#creating-a-docker-image-file-which-will-be-used-to-make-a-container">Creating a Docker Image file which will be used to make a Container</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#get-mysql-docker-image">Get MySQL Docker image</a></li>
+    <li><a href="#start-a-mysql-server-instance">Start a mysql server instance</a></li>
+    <li><a href="#docker-desktop">Docker Desktop</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#from-an-terminal">From an terminal</a></li>
+    <li><a href="#from-mysql-workbench">From MySQL Workbench</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

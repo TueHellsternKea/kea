@@ -10,15 +10,15 @@ Docker enables you to separate your applications from your infrastructure so you
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://example.org/4.-Semester/04-docker/" />
+<meta property="og:url" content="/4.-Semester/04-docker/" />
 
 <title>04 Docker | Tue Hellstern :: Kea</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin="anonymous">
+<link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" >
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.8ad930aacb0091456fa5839232a69c3138f03ea2509331560429d17a72cec3a2.js" integrity="sha256-itkwqssAkUVvpYOSMqacMTjwPqJQkzFWBCnRenLOw6I=" crossorigin="anonymous"></script>
-<link rel="alternate" type="application/rss+xml" href="http://example.org/4.-Semester/04-docker/index.xml" title="Tue Hellstern :: Kea" />
+  <script defer src="/en.search.min.1db5a139453743051eb2e0c6a0fcb67bae9a3b48de86d8d9992f1ee79c347560.js" ></script>
+<link rel="alternate" type="application/rss+xml" href="/4.-Semester/04-docker/index.xml" title="Tue Hellstern :: Kea" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -96,6 +96,54 @@ https://github.com/alex-shpak/hugo-book
 
           
   <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-60e0a39b65acbb92684e0dc73c12687b" class="toggle"  />
+    <label for="section-60e0a39b65acbb92684e0dc73c12687b" class="flex justify-between">
+      <a href="/4.-Semester/04-docker/dockerdemo/" class="">Dockerdemo</a>
+    </label>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-52c75c6a8a98574b9418e9793dc78313" class="toggle"  />
+    <label for="section-52c75c6a8a98574b9418e9793dc78313" class="flex justify-between">
+      <a href="/4.-Semester/04-docker/dockercompose/" class="">Dockercompose</a>
+    </label>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-8c0804728defde31e8377311b56b6bc9" class="toggle"  />
+    <label for="section-8c0804728defde31e8377311b56b6bc9" class="flex justify-between">
+      <a href="/4.-Semester/04-docker/dockertroubleshooting/" class="">Dockertroubleshooting</a>
+    </label>
+  
+
+        </li>
+      
     
       
         <li>
@@ -308,9 +356,14 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
+    <li><a href="#download-and-install">Download and Install</a></li>
+    <li><a href="#verify-docker">Verify Docker</a></li>
+    <li><a href="#docker-demo">Docker demo</a></li>
+  </ul>
+
+  <ul>
     <li><a href="#the-docker-daemon">The Docker daemon</a></li>
     <li><a href="#the-docker-client">The Docker client</a></li>
-    <li><a href="#docker-desktop">Docker Desktop</a></li>
     <li><a href="#docker-registries">Docker registries</a></li>
     <li><a href="#docker-objects">Docker objects</a></li>
     <li><a href="#images">Images</a></li>
@@ -318,8 +371,16 @@ https://github.com/alex-shpak/hugo-book
   </ul>
 
   <ul>
-    <li><a href="#download-and-install">Download and Install</a></li>
-    <li><a href="#docker-demo">Docker demo</a></li>
+    <li><a href="#list-your-images">List your images</a></li>
+    <li><a href="#delete-a-specific-image">Delete a specific image.</a></li>
+    <li><a href="#delete-all-existing-images">Delete all existing images.</a></li>
+    <li><a href="#list-all-existing-containers-running-and-not-running">List all existing containers (running and not running).</a></li>
+    <li><a href="#change-a-container-name-at-running-time">Change a container name at running time.</a></li>
+    <li><a href="#stop-a-specific-container">Stop a specific container.</a></li>
+    <li><a href="#stop-all-running-containers">Stop all running containers.</a></li>
+    <li><a href="#delete-a-specific-container-only-if-stopped">Delete a specific container (only if stopped).</a></li>
+    <li><a href="#delete-all-containers-only-if-stopped">Delete all containers (only if stopped).</a></li>
+    <li><a href="#display-logs-of-a-container">Display logs of a container.</a></li>
   </ul>
 </nav>
 
@@ -342,13 +403,41 @@ https://github.com/alex-shpak/hugo-book
 <p>Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications.</p>
 <p>By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.</p>
 <p><a href="https://www.docker.com/">www.docker.com</a></p>
+<h1 id="docker-desktop">
+  Docker Desktop
+  <a class="anchor" href="#docker-desktop">#</a>
+</h1>
+<p><strong>Docker Desktop</strong> is an easy-to-install application for your <strong>Mac</strong> or <strong>Windows</strong> environment that enables you to build and share containerized applications and microservice.</p>
+<p>Docker Desktop includes the Docker daemon (<em>dockerd</em>), the Docker client (<em>docker</em>), Docker Compose, Docker Content Trust, Kubernetes, and Credential Helper.</p>
+<p>The Docker Desktop application makes it easy for you to work with Docker. There are versions of Docker Desktop for; <em>macOS</em>, <em>Windows</em> and <em>Linux</em></p>
+<h2 id="download-and-install">
+  Download and Install
+  <a class="anchor" href="#download-and-install">#</a>
+</h2>
+<p>You can download the version you need her: <a href="https://www.docker.com/products/docker-desktop/">www.docker.com/products/docker-desktop</a></p>
+<ul>
+<li><a href="https://docs.docker.com/desktop/windows/install/">Install Docker Desktop on <strong>Windows</strong></a></li>
+<li><a href="https://docs.docker.com/desktop/mac/install/">Install Docker Desktop on <strong>Mac</strong></a></li>
+</ul>
+<h2 id="verify-docker">
+  Verify Docker
+  <a class="anchor" href="#verify-docker">#</a>
+</h2>
+<p>You can verify that Docker are working byt thise Docker command:</p>
+<pre><code>docker run hello-world
+</code></pre>
+<h2 id="docker-demo">
+  Docker demo
+  <a class="anchor" href="#docker-demo">#</a>
+</h2>
+<p>The GitHub Repository - <a href="https://github.com/TueHellsternKea/docker-demo.git">https://github.com/TueHellsternKea/docker-demo.git</a> - contains different guides on Docker.</p>
 <h1 id="create-docker-hub-account">
   Create Docker Hub account
   <a class="anchor" href="#create-docker-hub-account">#</a>
 </h1>
 <p>Docker Hub is a hosted repository service provided by Docker for finding and sharing container images.</p>
 <p><strong>Create an account on Docker Hub.</strong></p>
-<p><img src="./_image/docker-hub-1.jpg" alt="tesdt" /></p>
+<p><img src="./_image/docker-hub-1.jpg" alt="" /></p>
 <p>When you have created the account you can upload your own Docker images and you have access to a lot of different Docker images.</p>
 <h1 id="is-docker-a-virtual-machine">
   Is Docker a virtual machine?
@@ -378,13 +467,6 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#the-docker-client">#</a>
 </h2>
 <p>The Docker client (<em>docker</em>) is the primary way that many Docker users interact with Docker. When you use commands such as docker run, the client sends these commands to dockerd, which carries them out. The docker command uses the Docker API. The Docker client can communicate with more than one daemon.</p>
-<h2 id="docker-desktop">
-  Docker Desktop
-  <a class="anchor" href="#docker-desktop">#</a>
-</h2>
-<p><strong>Docker Desktop</strong> is an easy-to-install application for your <strong>Mac</strong> or <strong>Windows</strong> environment that enables you to build and share containerized applications and microservices.</p>
-<p>Docker Desktop includes the Docker daemon (<em>dockerd</em>), the Docker client (<em>docker</em>), Docker Compose, Docker Content Trust, Kubernetes, and Credential Helper.</p>
-<p><a href="./DockerDesktop.md">Docker Desktop</a></p>
 <h2 id="docker-registries">
   Docker registries
   <a class="anchor" href="#docker-registries">#</a>
@@ -413,25 +495,71 @@ https://github.com/alex-shpak/hugo-book
 <p>You can connect a container to one or more networks, attach storage to it, or even create a new image based on its current state.</p>
 <p>By default, a container is relatively well isolated from other containers and its host machine. You can control how isolated a container’s network, storage, or other underlying subsystems are from other containers or from the host machine.</p>
 <p>A container is defined by its image as well as any configuration options you provide to it when you create or start it. When a container is removed, any changes to its state that are not stored in persistent storage disappear.</p>
-<h1 id="docker-desktop-1">
-  Docker Desktop
-  <a class="anchor" href="#docker-desktop-1">#</a>
+<h1 id="useful-commands-for-docker">
+  Useful commands for Docker
+  <a class="anchor" href="#useful-commands-for-docker">#</a>
 </h1>
-<p>The Docker Desktop application makes it easy for you to work with Docker. There are versions of Docker Desktop for; <em>macOS</em>, <em>Windows</em> and <em>Linux</em></p>
-<h2 id="download-and-install">
-  Download and Install
-  <a class="anchor" href="#download-and-install">#</a>
+<p>This is a list of commands that may be useful to you on Docker</p>
+<h2 id="list-your-images">
+  List your images
+  <a class="anchor" href="#list-your-images">#</a>
 </h2>
-<p>You can download the version you need her: <a href="https://www.docker.com/products/docker-desktop/">www.docker.com/products/docker-desktop</a></p>
-<ul>
-<li><a href="https://docs.docker.com/desktop/windows/install/">Install Docker Desktop on <strong>Windows</strong></a></li>
-<li><a href="https://docs.docker.com/desktop/mac/install/">Install Docker Desktop on <strong>Mac</strong></a></li>
-</ul>
-<h2 id="docker-demo">
-  Docker demo
-  <a class="anchor" href="#docker-demo">#</a>
+<pre><code>docker image ls
+</code></pre>
+<h2 id="delete-a-specific-image">
+  Delete a specific image.
+  <a class="anchor" href="#delete-a-specific-image">#</a>
 </h2>
-<p>The GitHub Repository - <a href="https://github.com/TueHellsternKea/docker-demo.git">https://github.com/TueHellsternKea/docker-demo.git</a> - containes different guides on Docker</p>
+<pre><code>docker image rm [image name]
+</code></pre>
+<h2 id="delete-all-existing-images">
+  Delete all existing images.
+  <a class="anchor" href="#delete-all-existing-images">#</a>
+</h2>
+<pre><code>docker image rm $(docker images -a -q)
+</code></pre>
+<h2 id="list-all-existing-containers-running-and-not-running">
+  List all existing containers (running and not running).
+  <a class="anchor" href="#list-all-existing-containers-running-and-not-running">#</a>
+</h2>
+<pre><code>docker ps -a
+</code></pre>
+<h2 id="change-a-container-name-at-running-time">
+  Change a container name at running time.
+  <a class="anchor" href="#change-a-container-name-at-running-time">#</a>
+</h2>
+<pre><code>docker run --name [container name] [image name]
+</code></pre>
+<h2 id="stop-a-specific-container">
+  Stop a specific container.
+  <a class="anchor" href="#stop-a-specific-container">#</a>
+</h2>
+<pre><code>docker stop [container name]
+</code></pre>
+<h2 id="stop-all-running-containers">
+  Stop all running containers.
+  <a class="anchor" href="#stop-all-running-containers">#</a>
+</h2>
+<pre><code>docker stop $(docker ps -a -q)
+</code></pre>
+<h2 id="delete-a-specific-container-only-if-stopped">
+  Delete a specific container (only if stopped).
+  <a class="anchor" href="#delete-a-specific-container-only-if-stopped">#</a>
+</h2>
+<pre><code>docker rm [container name]
+</code></pre>
+<h2 id="delete-all-containers-only-if-stopped">
+  Delete all containers (only if stopped).
+  <a class="anchor" href="#delete-all-containers-only-if-stopped">#</a>
+</h2>
+<pre><code>docker rm $(docker ps -a -q)
+</code></pre>
+<h2 id="display-logs-of-a-container">
+  Display logs of a container.
+  <a class="anchor" href="#display-logs-of-a-container">#</a>
+</h2>
+<pre><code>docker logs [container name]
+</code></pre>
 <h1 id="links">
   Links
   <a class="anchor" href="#links">#</a>
@@ -479,9 +607,14 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
+    <li><a href="#download-and-install">Download and Install</a></li>
+    <li><a href="#verify-docker">Verify Docker</a></li>
+    <li><a href="#docker-demo">Docker demo</a></li>
+  </ul>
+
+  <ul>
     <li><a href="#the-docker-daemon">The Docker daemon</a></li>
     <li><a href="#the-docker-client">The Docker client</a></li>
-    <li><a href="#docker-desktop">Docker Desktop</a></li>
     <li><a href="#docker-registries">Docker registries</a></li>
     <li><a href="#docker-objects">Docker objects</a></li>
     <li><a href="#images">Images</a></li>
@@ -489,8 +622,16 @@ https://github.com/alex-shpak/hugo-book
   </ul>
 
   <ul>
-    <li><a href="#download-and-install">Download and Install</a></li>
-    <li><a href="#docker-demo">Docker demo</a></li>
+    <li><a href="#list-your-images">List your images</a></li>
+    <li><a href="#delete-a-specific-image">Delete a specific image.</a></li>
+    <li><a href="#delete-all-existing-images">Delete all existing images.</a></li>
+    <li><a href="#list-all-existing-containers-running-and-not-running">List all existing containers (running and not running).</a></li>
+    <li><a href="#change-a-container-name-at-running-time">Change a container name at running time.</a></li>
+    <li><a href="#stop-a-specific-container">Stop a specific container.</a></li>
+    <li><a href="#stop-all-running-containers">Stop all running containers.</a></li>
+    <li><a href="#delete-a-specific-container-only-if-stopped">Delete a specific container (only if stopped).</a></li>
+    <li><a href="#delete-all-containers-only-if-stopped">Delete all containers (only if stopped).</a></li>
+    <li><a href="#display-logs-of-a-container">Display logs of a container.</a></li>
   </ul>
 </nav>
 

@@ -3,20 +3,23 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Know Your Data#Sessions#Introduction 24-08-2022 - Wednesday (TUHE, JAIA and Hans Keiding) Slide ETL Slide 31-08-2022 - Wednesday (TUHE) 07-09-2022 - Wednesday (TUHE) 13-09-2022 - Tuesday (TUHE) Together with &ldquo;Working as a Business Analyst&rdquo; 21-09-2022 - Wednesday (Together with WaaBA) ETL 28-09-2022 - Wednesday (TUHE) Delivery 1 03-10-2022 - Monday Economics 06-10-2022 - Thursday (*TUHE, JAIA) 14-10-2022 - Friday (JAIA) Machine Learning 26-10-2022 - Wednesday (TUHE, JAIA and SimCorp) 11-11-2022 - Friday (JAIA) 18-11-2022 - Friday (TUEH) Dashboard 23-11-2022 - Wednesday (TUHE, JAIA and Henrik O.">
+<meta name="description" content="Docker Compose#Docker is used to manage an individual container for your application.
+Docker-Compose is used to manage several containers at the same time for the same application. This tool offers the same features as Docker but allows you to have more complex applications.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="/5.-Semester/Know-Your-Data/" />
+<meta property="og:description" content="Docker Compose#Docker is used to manage an individual container for your application.
+Docker-Compose is used to manage several containers at the same time for the same application. This tool offers the same features as Docker but allows you to have more complex applications." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/4.-Semester/04-docker/dockercompose/" /><meta property="article:section" content="4. Semester" />
 
-<title>Know Your Data | Tue Hellstern :: Kea</title>
+<meta property="article:modified_time" content="2022-10-18T20:21:31+02:00" />
+
+<title>Dockercompose | Tue Hellstern :: Kea</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css" >
   <script defer src="/flexsearch.min.js"></script>
   <script defer src="/en.search.min.1db5a139453743051eb2e0c6a0fcb67bae9a3b48de86d8d9992f1ee79c347560.js" ></script>
-<link rel="alternate" type="application/rss+xml" href="/5.-Semester/Know-Your-Data/index.xml" title="Tue Hellstern :: Kea" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -70,7 +73,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-6b5543328cac445d69ea9e222cb6025a" class="toggle"  />
+    <input type="checkbox" id="section-6b5543328cac445d69ea9e222cb6025a" class="toggle" checked />
     <label for="section-6b5543328cac445d69ea9e222cb6025a" class="flex justify-between">
       <a href="/4.-Semester/" class="">4. Semester</a>
     </label>
@@ -86,7 +89,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-3e6198acbc93b3ce9e70719f4e0b73be" class="toggle"  />
+    <input type="checkbox" id="section-3e6198acbc93b3ce9e70719f4e0b73be" class="toggle" checked />
     <label for="section-3e6198acbc93b3ce9e70719f4e0b73be" class="flex justify-between">
       <a href="/4.-Semester/04-docker/" class="">04 Docker</a>
     </label>
@@ -118,9 +121,9 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-52c75c6a8a98574b9418e9793dc78313" class="toggle"  />
+    <input type="checkbox" id="section-52c75c6a8a98574b9418e9793dc78313" class="toggle" checked />
     <label for="section-52c75c6a8a98574b9418e9793dc78313" class="flex justify-between">
-      <a href="/4.-Semester/04-docker/dockercompose/" class="">Dockercompose</a>
+      <a href="/4.-Semester/04-docker/dockercompose/" class="active">Dockercompose</a>
     </label>
   
 
@@ -173,7 +176,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-156bef0ddf951024222acfda5464e042" class="toggle" checked />
+    <input type="checkbox" id="section-156bef0ddf951024222acfda5464e042" class="toggle"  />
     <label for="section-156bef0ddf951024222acfda5464e042" class="flex justify-between">
       <a href="/5.-Semester/" class="">5. Semester</a>
     </label>
@@ -189,9 +192,9 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <input type="checkbox" id="section-1a9a2bf9c3796e10bc3195e7fc6122c3" class="toggle" checked />
+    <input type="checkbox" id="section-1a9a2bf9c3796e10bc3195e7fc6122c3" class="toggle"  />
     <label for="section-1a9a2bf9c3796e10bc3195e7fc6122c3" class="flex justify-between">
-      <a href="/5.-Semester/Know-Your-Data/" class="active">Know Your Data</a>
+      <a href="/5.-Semester/Know-Your-Data/" class="">Know Your Data</a>
     </label>
   
 
@@ -338,7 +341,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Know Your Data</strong>
+  <strong>Dockercompose</strong>
 
   <label for="toc-control">
     
@@ -352,11 +355,7 @@ https://github.com/alex-shpak/hugo-book
   <aside class="hidden clearfix">
     
   
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#sessions">Sessions</a></li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
 
 
 
@@ -367,115 +366,12 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="know-your-data">
-  Know Your Data
-  <a class="anchor" href="#know-your-data">#</a>
+  <article class="markdown"><h1 id="docker-compose">
+  Docker Compose
+  <a class="anchor" href="#docker-compose">#</a>
 </h1>
-<h2 id="sessions">
-  Sessions
-  <a class="anchor" href="#sessions">#</a>
-</h2>
-<ul>
-<li><a href="./introduction/README.md">Introduction</a>
-<ul>
-<li>24-08-2022 - Wednesday (<em>TUHE, JAIA and</em> <strong>Hans Keiding</strong>)</li>
-<li><a href="introduction.html">Slide</a></li>
-</ul>
-</li>
-<li><a href="./etl/README.md">ETL</a>
-<ul>
-<li><a href="./etl/ETL-slide.html">Slide</a></li>
-<li>31-08-2022 - Wednesday (<em>TUHE</em>)</li>
-<li>07-09-2022 - Wednesday (<em>TUHE</em>)</li>
-<li><a href="./etl/13092022.md">13-09-2022</a> - Tuesday (<em>TUHE</em>)</li>
-</ul>
-</li>
-<li><a href="./waaba/README.md">Together with &ldquo;Working as a Business Analyst&rdquo;</a>
-<ul>
-<li>21-09-2022 - Wednesday (<em>Together with WaaBA</em>)</li>
-</ul>
-</li>
-<li><a href="./etl/README.md">ETL</a>
-<ul>
-<li>28-09-2022 - Wednesday (<em>TUHE</em>)</li>
-</ul>
-</li>
-<li><a href="./delivery/README.md">Delivery 1</a>
-<ul>
-<li><strong>03-10-2022 - Monday</strong></li>
-</ul>
-</li>
-<li><a href="./economics/README.md">Economics</a>
-<ul>
-<li>06-10-2022 - Thursday (*TUHE, JAIA)</li>
-<li>14-10-2022 - Friday (<em>JAIA</em>)</li>
-</ul>
-</li>
-<li><a href="./machinelearning/README.md">Machine Learning</a>
-<ul>
-<li>26-10-2022 - Wednesday (<em>TUHE, JAIA and</em> <strong>SimCorp</strong>)</li>
-<li>11-11-2022 - Friday (<em>JAIA</em>)</li>
-<li>18-11-2022 - Friday (<em>TUEH</em>)</li>
-</ul>
-</li>
-<li><a href="./dashboard/README.md">Dashboard</a>
-<ul>
-<li>23-11-2022 - Wednesday (<em>TUHE, JAIA and</em> <strong>Henrik O. Larsen SamPension</strong>)</li>
-</ul>
-</li>
-<li><a href="./waaba/README.md">Together with &ldquo;Working as a Business Analyst&rdquo;</a>
-<ul>
-<li>30-11-2022 - Wednesday (<em>Together with WaaBA</em>)</li>
-</ul>
-</li>
-<li><a href="./dashboard/README.md">Dashboard</a>
-<ul>
-<li>02-12-2022 - Friday (<em>TUEH</em>)</li>
-<li>05-12-2022 - Monday (<em>TUHE &amp; JAIA</em>)</li>
-<li>07-12-2022 - Wednesday (<em>TUHE &amp; JAIA</em>)</li>
-</ul>
-</li>
-<li><a href="./delivery/README.md">Delivery 2</a>
-<ul>
-<li><strong>09-12-2022 - Friday</strong></li>
-</ul>
-</li>
-<li><a href="./delivery/README.md">Multiple choice</a>
-<ul>
-<li><strong>09-01-2023 - Monday</strong></li>
-</ul>
-</li>
-</ul>
-<h1 id="deliverys">
-  Delivery&rsquo;s
-  <a class="anchor" href="#deliverys">#</a>
-</h1>
-<table>
-<thead>
-<tr>
-<th><strong>Date</strong></th>
-<th><strong>Delivery</strong></th>
-<th><strong>Pct.</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>03-10-2022</strong></td>
-<td>Delivery 1</td>
-<td>40%</td>
-</tr>
-<tr>
-<td><strong>09-12-2022</strong></td>
-<td>Delivery 2</td>
-<td>40%</td>
-</tr>
-<tr>
-<td><strong>09-01-2023</strong></td>
-<td>Multiple choice</td>
-<td>20%</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Docker</strong> is used to manage an individual container for your application.</p>
+<p><strong>Docker-Compose</strong> is used to manage <em>several</em> containers at the same time for the same application. This tool offers the same features as Docker but allows you to have more complex applications.</p>
 </article>
  
       
@@ -511,11 +407,7 @@ https://github.com/alex-shpak/hugo-book
       <div class="book-toc-content">
         
   
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#sessions">Sessions</a></li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
 
 
  

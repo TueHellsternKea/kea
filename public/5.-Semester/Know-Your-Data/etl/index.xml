@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tue Hellstern :: Kea</title>
-    <link>http://example.org/5.-Semester/Know-Your-Data/etl/</link>
+    <link>/5.-Semester/Know-Your-Data/etl/</link>
     <description>Recent content on Tue Hellstern :: Kea</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://example.org/5.-Semester/Know-Your-Data/etl/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="/5.-Semester/Know-Your-Data/etl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://example.org/5.-Semester/Know-Your-Data/etl/automate-excel/</link>
+      <link>/5.-Semester/Know-Your-Data/etl/automate-excel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/5.-Semester/Know-Your-Data/etl/automate-excel/</guid>
+      <guid>/5.-Semester/Know-Your-Data/etl/automate-excel/</guid>
       <description>Automate data processing#In Excel using Python, Pandas, and Openpyxl#Files#Excel
 sales_data.xlsx sales_data.xlsx Jupyter Lab
 Real_world_example.ipynb demo.ipynb openpyxl-chart-notebook.ipynb openpyxl-tutorial.ipynb Introduction#This is all about automating Microsoft Excel using python and two different libraries.
@@ -20,10 +20,10 @@ The first library is Pandas. This library is used to process dataframes at high 
     
     <item>
       <title></title>
-      <link>http://example.org/5.-Semester/Know-Your-Data/etl/excel-powerbi-etl/</link>
+      <link>/5.-Semester/Know-Your-Data/etl/excel-powerbi-etl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/5.-Semester/Know-Your-Data/etl/excel-powerbi-etl/</guid>
+      <guid>/5.-Semester/Know-Your-Data/etl/excel-powerbi-etl/</guid>
       <description>Home
 Excel and ETL#Excel and Power BI has a powerful data analysis pack named Get and Transform (previously known as Power Query).
 It is an ETL pack for cleaning and sorting raw data from a range of input sources, such as CSV and text files.
@@ -32,10 +32,10 @@ In this age of data lakes and petabyte-scale databases, it is shocking how frequ
     
     <item>
       <title>ETL</title>
-      <link>http://example.org/5.-Semester/Know-Your-Data/etl/slides/ETL-slide/</link>
+      <link>/5.-Semester/Know-Your-Data/etl/slides/ETL-slide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/5.-Semester/Know-Your-Data/etl/slides/ETL-slide/</guid>
+      <guid>/5.-Semester/Know-Your-Data/etl/slides/ETL-slide/</guid>
       <description>ETL #Extract - Transform - Load #Data sources #Can you name some data sources? #Why ETL?#Analyze business data for taking critical business decisions Transactional databases cannot answer complex business questions Provides a method of moving the data from various sources into a data warehouse Allow verification of data transformation, aggregation and calculations rules ETL process can perform complex transformations ETL helps to Migrate data into a Data Warehouse Tools #Can you name some ETL tools?</description>
     </item>
     
