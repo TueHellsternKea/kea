@@ -1,6 +1,6 @@
 ---
 bookCollapseSection: true
-weight: 10
+weight: 50
 ---
 
 # Distribuerede systemer

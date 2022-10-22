@@ -1,4 +1,8 @@
-[Home](../modul-4-2.md)
+---
+bookCollapseSection: true
+weight: 30
+---
+
 # Python, Web Service API
     - 13-10-2022 - Torsdag
 

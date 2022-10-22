@@ -1,6 +1,6 @@
 ---
 bookCollapseSection: true
-weight: 10
+weight: 20
 ---
 
 # Virtualisering (Azure)

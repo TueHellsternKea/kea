@@ -1,6 +1,6 @@
 ---
 bookCollapseSection: true
-weight: 10
+weight: 40
 ---
 
 ![](https://www.docker.com/wp-content/uploads/2022/03/horizontal-logo-monochromatic-white.png)
@@ -30,7 +30,7 @@ You can download the version you need her: [www.docker.com/products/docker-deskt
 - [Install Docker Desktop on **Mac**](https://docs.docker.com/desktop/mac/install/)
 
 ## Verify Docker
-You can verify that Docker are working byt thise Docker command:
+You can verify that Docker are working with this Docker command:
 
     docker run hello-world
 
@@ -83,7 +83,7 @@ When you use the docker pull or docker run commands, the required images are pul
 ## Docker objects
 When you use Docker, you are creating and using images, containers, networks, volumes, plugins, and other objects. This section is a brief overview of some of those objects.
 
-## Images
+### Images
 An image is a read-only template with instructions for creating a Docker container. Often, an image is based on another image, with some additional customization. 
 
 For example, you may build an image which is based on the ubuntu image, but installs the Apache web server and your application, as well as the configuration details needed to make your application run.
@@ -94,7 +94,7 @@ Each instruction in a Dockerfile creates a layer in the image. When you change t
 
 This is part of what makes images so lightweight, small, and fast, when compared to other virtualization technologies.
 
-## Containers
+### Containers
 A container is a runnable instance of an image. You can create, start, stop, move, or delete a container using the Docker API or CLI. 
 
 You can connect a container to one or more networks, attach storage to it, or even create a new image based on its current state.
