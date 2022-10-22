@@ -104,10 +104,10 @@ There are 3 steps in this demo:
 2. Creating a Docker Image file which will be used to make a Container
 3. Testing the container
 
-## Installing Python and Pandas onto our system and making the Python application
+## Installing
 
-1. Install Python, *if its NOT on on your system*
-2. Install Pandas, *if its NOT on on your system*
+1. Install **Python**, *if its NOT on on your system*
+2. Install **Pandas**, *if its NOT on on your system*
 
 ```
 pip3 install pandas
