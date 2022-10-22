@@ -4,16 +4,16 @@ weight: 20
 ---
 
 # Create your fist Docker application
-The purpose of this Docker application is to create a Python program that print/displays a sentence. 
+The purpose of this Docker application is to create a Python program that print/displays a sentence - *Welcome to your first Docker app*
 
 The Python program will have to be launched through Dockerfile.
 
 Note: You must have install Docker on your computer
 
 ## Create the application
-You have to create a folder on your computer - minfirstdockerapp
+You have to create a folder on your computer - **myfirstdockerapp**
 
-It must contain the following two files:
+It contains the following two files:
 
 - **main.py** - *Python file containing the code to be executed*
 - **Dockerfile** - *Docker file that will contain the necessary instructions to create the environment*
@@ -41,17 +41,17 @@ The first result is the official image to execute Python.
 You must create a Dockerfile and add this commands:
 
 ```dockerfile
-# Importing the base image.
+# Importing the base image
 FROM python:latest
 
-# To launch your python code, you must import it into our image.
-# Use the keyword 'COPY' to do that.
-# The first parameter 'main.py' is the name of the file on the host.
-# The second parameter '/' is the path where to put the file on the image.
+# To launch your python code, you must import it into our image
+# Use the keyword 'COPY' to do that
+# The first parameter 'main.py' is the name of the file on the host
+# The second parameter '/' is the path where to put the file on the image
 COPY main.py /
 
-# You need to define the command to launch when you run the image.
-# Use the keyword 'CMD' to do that.
+# You need to define the command to launch when you run the image
+# Use the keyword 'CMD' to do that
 CMD [ "python", "./main.py" ]
 ```
 
@@ -72,7 +72,7 @@ The launce of your application are done in 2 parts
 
 ![](/static/image/pandaspythondocker.jpg)
 
-# Using Pandas, Python and Docker
+## Using Pandas, Python and Docker
 Using a Docker container to run a Python application using Pandas library to import the **customers.csv** file. 
 
 ![customeres_csv](customers_csv.jpg)
@@ -91,7 +91,7 @@ It can be time consuming to install all the dependencies from scratch whenever y
 Docker provides a way to package everything you need to run your applications in a Container which you can download or pull into all the devices you use and just start working right away.
 
 ## Files
-The files for this demo i located in the folder **docker-demo**
+The files for this demo is located in the folder **docker-demo**
 
 - customers.csv
 - demo1_app.py
@@ -157,7 +157,7 @@ docker build --tag docker-demo1 .
 
 *Make sure that Docker demon is running*
 
-# Testing the container
+## Testing the container
 1. Run the docker image by typing, in your commandpromt:
 
 ```
@@ -183,13 +183,13 @@ docker run demo_pandas_app
 
 
 ![](https://raw.githubusercontent.com/docker-library/docs/c408469abbac35ad1e4a50a6618836420eb9502e/mysql/logo.png)
-# MySQL and Docker
+## MySQL and Docker
 
-## Get MySQL Docker image
+### Get MySQL Docker image
 
     docker pull mysql
 
-## Start a mysql server instance
+### Start a mysql server instance
 
     docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
 
@@ -211,13 +211,13 @@ The port number definition is:
     docker exec -it my-mysql mysql -uroot -p
 
 
-## Docker Desktop
+### Docker Desktop
 ![](./_image/mysq-docker-desktop.jpg)
 
-# Access to MySQL Server
+## Access to MySQL Server
 Now yo need to access the MySQL Server.
 
-## From an terminal
+### From an terminal
 From a terminal you can use:
 
     docker exec -it my-mysql mysql -uroot -p
@@ -226,7 +226,7 @@ for access to the server. Use the password you created.
 
 ![](./_image/sql_access_1.jpg)
 
-## From MySQL Workbench
+### From MySQL Workbench
 From MySQL Workbench you have to use:
 
 Hostname: localhost
@@ -235,6 +235,6 @@ Username: root
 
 ![](/image/workbench.jpg)
 
-# Link
+## Link
 - You can finde more information about this Docker file at [https://hub.docker.com/_/mysql](https://hub.docker.com/_/mysql)
 - Git repo of the Docker "Official Image" for mysql [github.com/docker-library/mysql](https://github.com/docker-library/mysql)
