@@ -3,6 +3,16 @@ bookCollapseSection: true
 weight: 20
 ---
 
+# Ubuntu Docker
+Use thise command for creating an Ubuntu container
+
+    docker pull ubuntu
+    docker ps
+    docker inspect -f "{{ .NetworkSettings.IPAddress }}" test
+    docker exec -it nginx /bin/bash
+
+
+
 # Create your fist Docker application
 The purpose of this Docker application is to create a Python program that print/displays a sentence - *Welcome to your first Docker app*
 
