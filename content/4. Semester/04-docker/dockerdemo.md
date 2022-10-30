@@ -3,6 +3,22 @@ bookCollapseSection: true
 weight: 20
 ---
 
+# Ubuntu Docker
+Use thise command for creating an Ubuntu container
+
+    docker pull ubuntu
+    docker ps
+    docker inspect -f "{{ .NetworkSettings.IPAddress }}" test
+    docker exec -it nginx /bin/bash
+
+
+## Openssh Server
+    apt update && apt -y install openssh-server
+    echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
+    passwd
+    /etc/init.d/ssh start
+    ssh root@172.17.0.2
+
 # Create your fist Docker application
 The purpose of this Docker application is to create a Python program that print/displays a sentence - *Welcome to your first Docker app*
 
