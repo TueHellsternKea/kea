@@ -34,6 +34,7 @@ We are going to create a Azure Windows Virtual Machine for the Power Bi Desktop.
 - Select Windows 11
 
 ## Video
+
 <div style="position: relative; padding-bottom: 108.33333333333333%; height: 0;"><iframe src="https://www.loom.com/embed/175aae60839c451fa9c5d101e2f3dfad" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 # Connect to VM
